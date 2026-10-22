@@ -564,6 +564,132 @@
 .timeline-role { color: var(--muted); font-size: 15px; margin-top: 2px; }
 .timeline-item p { color: var(--muted); font-size: 15.5px; margin-top: 10px; max-width: 580px; }
 
+/* --- Цены ---------------------------------------------------------------------------- */
+
+.grid-prices {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.price-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 26px 24px;
+  transition: transform .2s, box-shadow .2s, border-color .2s;
+}
+.price-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--line));
+}
+.price-card--hit { border-color: color-mix(in srgb, var(--accent) 55%, var(--line)); }
+
+.price-name { font-weight: 700; font-size: 16px; letter-spacing: -0.01em; }
+
+.price-value {
+  margin: 12px 0 10px;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.15;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  width: fit-content;
+}
+
+.price-desc { color: var(--muted); font-size: 14.5px; flex: 1; }
+
+.price-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.price-badge {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-radius: 999px;
+  padding: 4px 10px;
+  white-space: nowrap;
+}
+
+.price-term {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.prices-note {
+  margin-top: 26px;
+  color: var(--muted);
+  font-size: 14.5px;
+}
+
+/* --- Отзывы ---------------------------------------------------------------------------- */
+
+.grid-reviews {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 26px 24px;
+  transition: transform .2s, box-shadow .2s, border-color .2s;
+}
+.review-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--line));
+}
+
+.review-stars {
+  color: #f0a51f;
+  font-size: 15px;
+  letter-spacing: 3px;
+}
+
+.review-text { color: var(--muted); font-size: 15.5px; flex: 1; }
+
+.review-author { display: flex; align-items: center; gap: 12px; }
+
+.review-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--grad);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 15px;
+  flex: none;
+}
+
+.review-name { font-weight: 600; font-size: 15px; }
+.review-role { color: var(--muted); font-size: 13px; }
+
 /* --- Кнопка «наверх» ------------------------------------------------------------------------------------------ */
 
 .to-top {
