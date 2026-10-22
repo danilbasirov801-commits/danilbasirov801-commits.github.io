@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Карта сайта (обновите адрес, если поменяете домен)
+Sitemap: https://danilbasirov801-commits.github.io/sitemap.xml

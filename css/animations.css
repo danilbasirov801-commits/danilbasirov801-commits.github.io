@@ -1,0 +1,61 @@
+/* ============================================================================
+   ANIMATIONS.CSS — все анимации сайта: появление при прокрутке,
+   вход героя, бегущая строка, пульсация, ключевые кадры.
+   Анимации отключаются, если у посетителя включено «уменьшить анимацию».
+   ========================================================================== */
+
+/* --- Появление при прокрутке ---------------------------------------------------
+   Работает только когда JS включён (html.js ставит скрипт):
+   без JS весь контент просто виден сразу. */
+
+@media (prefers-reduced-motion: no-preference) {
+  html.js .reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity .6s ease, transform .6s ease;
+  }
+  html.js .reveal.is-visible { opacity: 1; transform: none; }
+
+  /* Вход героя при загрузке страницы */
+  html.js .hero .badge    { animation: rise-in .55s ease both; }
+  html.js .hero .hero-title { animation: rise-in .55s ease .08s both; }
+  html.js .hero .hero-sub   { animation: rise-in .55s ease .16s both; }
+  html.js .hero .hero-actions { animation: rise-in .55s ease .24s both; }
+  html.js .hero .stats      { animation: rise-in .55s ease .34s both; }
+}
+
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* --- Ключевые кадры --------------------------------------------------------------- */
+
+/* Пульсация зелёной точки «открыт для заказов» */
+@keyframes pulse-dot {
+  0%, 100% { box-shadow: 0 0 0 3px var(--ok-soft); }
+  50% { box-shadow: 0 0 0 7px transparent; }
+}
+
+/* Бегущая строка технологий: трек дублируется в разметке, сдвиг на 50% даёт бесшовный цикл */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Дрейф градиентных сфер в герое */
+@keyframes orb-float {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(40px, 26px) scale(1.12); }
+}
+
+/* --- Уважение к настройкам пользователя ---------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+  .marquee-track { animation: none !important; }
+}

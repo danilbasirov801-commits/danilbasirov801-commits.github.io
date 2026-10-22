@@ -1,0 +1,190 @@
+/* ============================================================================
+   BASE.CSS — фундамент: переменные, темы, сброс, типографика, утилиты.
+   Хотите поменять цвета/шрифты — правьте переменные в :root ниже.
+   ========================================================================== */
+
+:root {
+  /* Шрифты (подключаются в <head> каждой страницы) */
+  --font-display: "Unbounded", "Onest", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body: "Onest", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Consolas, "Courier New", monospace;
+
+  /* Светлая тема — тёплый «пергамент», без режущих белых поверхностей */
+  --bg: #f0ede6;
+  --surface: #f9f8f3;
+  --surface-2: #e8e4da;
+  --ink: #191722;
+  --muted: #66616f;
+  --line: #ddd8cb;
+
+  --accent: #5646e5;
+  --accent-strong: #4433cc;
+  --accent-soft: #eae7fa;
+  --accent-contrast: #ffffff;
+  --grad: linear-gradient(115deg, #5646e5, #7c5cf0 55%, #a35df2);
+
+  --ok: #0fa968;
+  --ok-soft: rgba(15, 169, 104, .14);
+
+  --dot: rgba(23, 21, 31, .11);
+  --glow-1: rgba(86, 70, 229, .10);
+  --glow-2: rgba(163, 93, 242, .09);
+
+  --shadow-sm: 0 1px 2px rgba(23, 21, 31, .05), 0 6px 18px -8px rgba(23, 21, 31, .12);
+  --shadow-md: 0 2px 4px rgba(23, 21, 31, .05), 0 18px 44px -16px rgba(23, 21, 31, .22);
+  --shadow-btn: 0 10px 24px -10px rgba(86, 70, 229, .55);
+
+  --radius: 18px;
+  --radius-lg: 24px;
+  --header-h: 72px;
+}
+
+/* Тёмная тема — выбрана вручную кнопкой в шапке */
+[data-theme="dark"] {
+  --bg: #0c0b11;
+  --surface: #14131a;
+  --surface-2: #1b1a24;
+  --ink: #efedf6;
+  --muted: #9d98ab;
+  --line: #262430;
+
+  --accent: #8f7bff;
+  --accent-strong: #a795ff;
+  --accent-soft: #221f38;
+  --accent-contrast: #14121f;
+  --grad: linear-gradient(115deg, #6e5cf5, #8f7bff 55%, #b07bff);
+
+  --ok: #34d399;
+  --ok-soft: rgba(52, 211, 153, .16);
+
+  --dot: rgba(239, 237, 246, .13);
+  --glow-1: rgba(110, 92, 245, .16);
+  --glow-2: rgba(176, 123, 255, .13);
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .5), 0 8px 22px -10px rgba(0, 0, 0, .55);
+  --shadow-md: 0 2px 4px rgba(0, 0, 0, .45), 0 22px 52px -18px rgba(0, 0, 0, .7);
+  --shadow-btn: 0 10px 26px -10px rgba(110, 92, 245, .6);
+}
+
+/* Тёмная тема — пока пользователь не выбрал вручную, берём системную */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0c0b11;
+    --surface: #14131a;
+    --surface-2: #1b1a24;
+    --ink: #efedf6;
+    --muted: #9d98ab;
+    --line: #262430;
+
+    --accent: #8f7bff;
+    --accent-strong: #a795ff;
+    --accent-soft: #221f38;
+    --accent-contrast: #14121f;
+    --grad: linear-gradient(115deg, #6e5cf5, #8f7bff 55%, #b07bff);
+
+    --ok: #34d399;
+    --ok-soft: rgba(52, 211, 153, .16);
+
+    --dot: rgba(239, 237, 246, .13);
+    --glow-1: rgba(110, 92, 245, .16);
+    --glow-2: rgba(176, 123, 255, .13);
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, .5), 0 8px 22px -10px rgba(0, 0, 0, .55);
+    --shadow-md: 0 2px 4px rgba(0, 0, 0, .45), 0 22px 52px -18px rgba(0, 0, 0, .7);
+    --shadow-btn: 0 10px 26px -10px rgba(110, 92, 245, .6);
+  }
+}
+
+/* --- Сброс и база ----------------------------------------------------------- */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.65;
+  font-size: 16.5px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition: background .25s ease, color .25s ease;
+}
+
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+button { font: inherit; }
+
+::selection { background: var(--accent); color: #fff; }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* --- Типографика ------------------------------------------------------------ */
+
+h1, h2, h3 { line-height: 1.16; letter-spacing: -0.02em; font-weight: 700; text-wrap: balance; }
+
+/* Надзаголовок раздела */
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+.kicker::before {
+  content: "";
+  width: 26px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--grad);
+  flex: none;
+}
+
+/* Текст с градиентом */
+.grad-text {
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* --- Служебное --------------------------------------------------------------- */
+
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.skip {
+  position: absolute;
+  left: -999px;
+  top: 10px;
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 10px;
+  z-index: 200;
+  text-decoration: none;
+}
+.skip:focus { left: 10px; }
+
+/* --- Двуязычность --------------------------------------------------------------
+   В разметке русский текст (span.l-ru), рядом английский (span.l-en).
+   Какой показывать — решает CSS по атрибуту lang у <html>:
+   скрипт в <head> ставит его до первой отрисовки, поэтому скачков нет. */
+
+html[lang="en"] .l-ru { display: none !important; }
+html[lang="ru"] .l-en { display: none !important; }
+.l-en { display: none; }
+html[lang="en"] .l-en { display: revert; }

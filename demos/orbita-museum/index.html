@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ОРБИТА — музей космоса будущего</title>
+  <meta name="description" content="Музей космоса «ОРБИТА»: экспозиции в куполе 360°, лекции, ночные наблюдения. Купить билет онлайн.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="ОРБИТА — на главную">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+          <circle cx="13" cy="13" r="5" fill="url(#or)"/>
+          <ellipse cx="13" cy="13" rx="11.5" ry="5.5" stroke="url(#or)" stroke-width="1.8" transform="rotate(-18 13 13)"/>
+          <circle cx="22.5" cy="8.5" r="1.8" fill="#fbbf24"/>
+          <defs><linearGradient id="or" x1="0" y1="0" x2="26" y2="26"><stop stop-color="#fbbf24"/><stop offset="1" stop-color="#fb723c"/></linearGradient></defs>
+        </svg>
+        ОРБИТА
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+        <a href="index.html" class="is-active" aria-current="page">Главная</a>
+        <a href="expositions.html">Экспозиции</a>
+        <a href="affiche.html">Афиша</a>
+        <a href="tickets.html">Билеты</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <a href="tickets.html" class="btn btn-primary btn-sm header-cta">Купить билет</a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="stars" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="badge reveal"><span class="badge-dot"></span> 1 октября открываем новый купол</span>
+          <h1 class="reveal" data-delay="1">Трогать <span class="grad-text">космос</span> разрешено</h1>
+          <p class="lead reveal" data-delay="2">«ОРБИТА» — музей, где можно постоять на Марсе, заглянуть за горизонт чёрной дыры и поужинать на орбите. Без скафандра, но с полным погружением.</p>
+          <div class="hero-actions reveal" data-delay="3">
+            <a href="tickets.html" class="btn btn-primary">Купить билет</a>
+            <a href="expositions.html" class="btn btn-ghost">Смотреть экспозиции</a>
+          </div>
+          <ul class="hero-notes reveal" data-delay="3">
+            <li>Ежедневно 10:00—22:00</li>
+            <li>Купол 360°</li>
+            <li>Для детей с 4 лет</li>
+          </ul>
+        </div>
+
+        <!-- Планета на CSS -->
+        <div class="planet-scene reveal" data-delay="2" role="img" aria-label="Планета с кольцом">
+          <div class="planet">
+            <div class="planet-ring" aria-hidden="true"></div>
+            <div class="orbit orbit-1" aria-hidden="true"><span></span></div>
+            <div class="orbit orbit-2" aria-hidden="true"><span></span></div>
+          </div>
+          <div class="float-chip fc-1" aria-hidden="true">🪐 Купол 360°</div>
+          <div class="float-chip fc-2" aria-hidden="true">🔭 Ночные наблюдения</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ЦИФРЫ ============ -->
+    <section class="section stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat reveal"><span class="stat-value" data-count="12">0</span><span class="stat-label">интерактивных залов</span></div>
+          <div class="stat reveal" data-delay="1"><span class="stat-value" data-count="86">0</span><span class="stat-label">экспонатов, которые можно трогать</span></div>
+          <div class="stat reveal" data-delay="2"><span class="stat-value" data-count="360" data-suffix="°">0</span><span class="stat-label">кинопоказ в большом куполе</span></div>
+          <div class="stat reveal" data-delay="3"><span class="stat-value" data-count="9">0</span><span class="stat-label">метров — диаметр телескопа обсерватории</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ПОПУЛЯРНЫЕ ЭКСПОЗИЦИИ ============ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Экспозиции</span>
+          <h2>Куда все идут в первую очередь</h2>
+          <p class="section-sub">Три самых популярных зала. Полный список — в разделе «Экспозиции».</p>
+        </div>
+        <div class="cards-grid three">
+          <a href="exposition.html" class="card expo-card reveal">
+            <div class="expo-art art-hole">
+              <span class="hole-disc" aria-hidden="true"></span>
+            </div>
+            <div class="expo-body">
+              <span class="expo-tag">Купол 360° · 12+</span>
+              <h3>Чёрные дыры: за горизонтом</h3>
+              <p>Путешествие к границе, из которой ещё не возвращались. 40 минут под куполом.</p>
+              <span class="expo-link">Подробнее →</span>
+            </div>
+          </a>
+          <a href="exposition.html" class="card expo-card reveal" data-delay="1">
+            <div class="expo-art art-mars">
+              <span class="mars-disc" aria-hidden="true"></span>
+            </div>
+            <div class="expo-body">
+              <span class="expo-tag">Зал 2 · 6+</span>
+              <h3>Марс: хроники красной планеты</h3>
+              <p>Настоящий грунт-аналог, макет колонии и шлем виртуальной посадки.</p>
+              <span class="expo-link">Подробнее →</span>
+            </div>
+          </a>
+          <a href="exposition.html" class="card expo-card reveal" data-delay="2">
+            <div class="expo-art art-station">
+              <span class="station-disc" aria-hidden="true"></span>
+            </div>
+            <div class="expo-body">
+              <span class="expo-tag">Зал 4 · 4+</span>
+              <h3>Станция «Мир-2»: жизнь на орбите</h3>
+              <p>Как спят, едят и моются в невесомости — в полном макете орбитальной станции.</p>
+              <span class="expo-link">Подробнее →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ АФИША-ПРЕВЬЮ ============ -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Афиша</span>
+          <h2>Ближайшие события</h2>
+        </div>
+        <div class="events-preview">
+          <a href="affiche.html" class="event-row reveal">
+            <span class="event-date"><strong>26</strong><em>сент</em></span>
+            <span class="event-info">
+              <span class="event-type t-lecture">Лекция</span>
+              <strong>Почему мы ещё не колонизировали Луну</strong>
+              <em>Лектор — инженер Роскосмоса · 19:00 · Лекторий</em>
+            </span>
+            <span class="event-go" aria-hidden="true">→</span>
+          </a>
+          <a href="affiche.html" class="event-row reveal" data-delay="1">
+            <span class="event-date"><strong>27</strong><em>сент</em></span>
+            <span class="event-info">
+              <span class="event-type t-show">Шоу</span>
+              <strong>«Сатурн в зените» — кинопоказ в куполе</strong>
+              <em>Полный купол 360° · 21:00 · Большой купол</em>
+            </span>
+            <span class="event-go" aria-hidden="true">→</span>
+          </a>
+          <a href="affiche.html" class="event-row reveal" data-delay="2">
+            <span class="event-date"><strong>28</strong><em>сент</em></span>
+            <span class="event-info">
+              <span class="event-type t-obs">Наблюдение</span>
+              <strong>Ночь открытого телескопа: Юпитер и кольца Сатурна</strong>
+              <em>Обсерватория музея · 22:30 · Крыша</em>
+            </span>
+            <span class="event-go" aria-hidden="true">→</span>
+          </a>
+        </div>
+        <div class="center reveal"><a href="affiche.html" class="btn btn-ghost">Вся афиша</a></div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-panel reveal">
+          <span class="eyebrow">Планетарий выходного дня</span>
+          <h2>Сходи на Марс <span class="grad-text">за 650 ₽</span></h2>
+          <p>Один билет — все залы и купол. Детям и семьям — скидки, детям до 4 лет — бесплатно.</p>
+          <a href="tickets.html" class="btn btn-primary btn-lg">Выбрать билет</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="logo" href="index.html">ОРБИТА</a>
+        <p>Музей космоса будущего.<br>Москва, Космическая наб., 9 · ежедневно 10:00—22:00</p>
+      </div>
+      <nav class="footer-nav" aria-label="Разделы сайта">
+        <a href="index.html">Главная</a>
+        <a href="expositions.html">Экспозиции</a>
+        <a href="affiche.html">Афиша</a>
+        <a href="tickets.html">Билеты</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <p class="footer-copy">© 2026 ОРБИТА. Концепт-демо — кейс для UI/UX-портфолио.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

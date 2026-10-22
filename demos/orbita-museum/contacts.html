@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты — музей «ОРБИТА»</title>
+  <meta name="description" content="Адрес, часы работы и форма связи музея космоса «ОРБИТА». Как добраться: метро, автобус, парковка.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="ОРБИТА — на главную">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+          <circle cx="13" cy="13" r="5" fill="url(#or)"/>
+          <ellipse cx="13" cy="13" rx="11.5" ry="5.5" stroke="url(#or)" stroke-width="1.8" transform="rotate(-18 13 13)"/>
+          <circle cx="22.5" cy="8.5" r="1.8" fill="#fbbf24"/>
+          <defs><linearGradient id="or" x1="0" y1="0" x2="26" y2="26"><stop stop-color="#fbbf24"/><stop offset="1" stop-color="#fb723c"/></linearGradient></defs>
+        </svg>
+        ОРБИТА
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+        <a href="index.html">Главная</a>
+        <a href="expositions.html">Экспозиции</a>
+        <a href="affiche.html">Афиша</a>
+        <a href="tickets.html">Билеты</a>
+        <a href="contacts.html" class="is-active" aria-current="page">Контакты</a>
+      </nav>
+      <a href="tickets.html" class="btn btn-primary btn-sm header-cta">Купить билет</a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumbs reveal" aria-label="Хлебные крошки">
+          <a href="index.html">Главная</a><span aria-hidden="true">/</span><em>Контакты</em>
+        </nav>
+        <h1 class="reveal" data-delay="1">Связаться <span class="grad-text">с центром управления</span></h1>
+        <p class="page-lead reveal" data-delay="2">Отвечаем в течение часа с 10:00 до 22:00. Для групп от 10 человек — отдельная линия.</p>
+      </div>
+    </section>
+
+    <!-- ============ ИНФО + ФОРМА ============ -->
+    <section class="section flush-top">
+      <div class="container booking-grid">
+        <div class="contact-info reveal">
+          <div class="card info-card">
+            <h3>Музей «ОРБИТА»</h3>
+            <ul class="info-list">
+              <li>
+                <span class="info-ico" aria-hidden="true">📍</span>
+                <span><strong>Адрес</strong><br>Москва, Космическая набережная, 9</span>
+              </li>
+              <li>
+                <span class="info-ico" aria-hidden="true">🕘</span>
+                <span><strong>Часы работы</strong><br>Ежедневно 10:00—22:00, касса до 21:30</span>
+              </li>
+              <li>
+                <span class="info-ico" aria-hidden="true">📞</span>
+                <span><strong>Телефон</strong><br><a href="tel:+74950000000">+7 (495) 000-00-00</a></span>
+              </li>
+              <li>
+                <span class="info-ico" aria-hidden="true">✉️</span>
+                <span><strong>Почта</strong><br><a href="mailto:hi@orbita.museum">hi@orbita.museum</a></span>
+              </li>
+              <li>
+                <span class="info-ico" aria-hidden="true">👥</span>
+                <span><strong>Группы от 10 человек</strong><br><a href="mailto:groups@orbita.museum">groups@orbita.museum</a></span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Стилизованная карта -->
+          <div class="card map-card" role="img" aria-label="Схема проезда: музей на Космической набережной, 9">
+            <span class="map-grid" aria-hidden="true"></span>
+            <span class="map-river" aria-hidden="true"></span>
+            <span class="map-pin" aria-hidden="true"><i></i></span>
+            <span class="map-label" aria-hidden="true">м. Космонавтов</span>
+            <span class="map-label map-label-2" aria-hidden="true">ОРБИТА</span>
+          </div>
+        </div>
+
+        <div class="card booking contact-form-card reveal" data-delay="1">
+          <h2>Написать нам</h2>
+          <form id="contact-form" novalidate>
+            <label class="field">
+              <span class="field-label">Как вас зовут</span>
+              <input type="text" id="cf-name" name="name" placeholder="Юрий" required>
+            </label>
+            <label class="field">
+              <span class="field-label">Почта для ответа</span>
+              <input type="email" id="cf-email" name="email" placeholder="yuri@cosmos.ru" required>
+            </label>
+            <label class="field">
+              <span class="field-label">Тема</span>
+              <select id="cf-topic" name="topic">
+                <option>Общий вопрос</option>
+                <option>Групповое посещение</option>
+                <option>Дни рождения и аренда</option>
+                <option>Сотрудничество</option>
+              </select>
+            </label>
+            <label class="field">
+              <span class="field-label">Сообщение</span>
+              <textarea id="cf-message" name="message" rows="4" placeholder="Хочу привезти класс из 24 человек…" required></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary btn-block">Отправить</button>
+            <p class="booking-note">Нажимая кнопку, вы соглашаетесь с политикой обработки данных.</p>
+          </form>
+          <div class="booking-success" id="contact-success" hidden>
+            <p class="cs-ico" aria-hidden="true">🛰️</p>
+            <h3>Сообщение ушло!</h3>
+            <p>Центр управления получил сигнал. Ответим на почту в течение часа с 10:00 до 22:00.</p>
+            <button type="button" class="btn btn-ghost" id="contact-again">Написать ещё</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ КАК ДОБРАТЬСЯ ============ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Маршрут</span>
+          <h2>Как добраться</h2>
+        </div>
+        <div class="cards-grid three">
+          <article class="card route-card reveal">
+            <span class="route-ico" aria-hidden="true">Ⓜ️</span>
+            <h3>На метро</h3>
+            <p>Станция «Космонавтов» (оранжевая ветка), выход 3 — 7 минут пешком по набережной.</p>
+          </article>
+          <article class="card route-card reveal" data-delay="1">
+            <span class="route-ico" aria-hidden="true">🚌</span>
+            <h3>На автобусе</h3>
+            <p>Маршруты 12, 45 и ночной Н2 до остановки «Космическая набережная» — прямо у входа.</p>
+          </article>
+          <article class="card route-card reveal" data-delay="2">
+            <span class="route-ico" aria-hidden="true">🚗</span>
+            <h3>На машине</h3>
+            <p>Парковка на 200 мест за куполом, первые два часа бесплатные для гостей музея.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="logo" href="index.html">ОРБИТА</a>
+        <p>Музей космоса будущего.<br>Москва, Космическая наб., 9 · ежедневно 10:00—22:00</p>
+      </div>
+      <nav class="footer-nav" aria-label="Разделы сайта">
+        <a href="index.html">Главная</a>
+        <a href="expositions.html">Экспозиции</a>
+        <a href="affiche.html">Афиша</a>
+        <a href="tickets.html">Билеты</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <p class="footer-copy">© 2026 ОРБИТА. Концепт-демо — кейс для UI/UX-портфолио.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Страница не найдена — Данил, веб-разработчик</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#f0ede6">
+  <!-- У 404-страницы нет фиксированного адреса, поэтому стили встроены прямо сюда -->
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Onest", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      background: #f7f6f3;
+      color: #17151f;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 24px;
+      line-height: 1.6;
+    }
+    .code {
+      font-size: clamp(72px, 18vw, 160px);
+      font-weight: 800;
+      line-height: 1;
+      background: linear-gradient(115deg, #5646e5, #7c5cf0 55%, #a35df2);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      letter-spacing: -0.04em;
+    }
+    h1 { font-size: clamp(1.3rem, 4vw, 2rem); margin: 14px 0 10px; letter-spacing: -0.02em; }
+    p { color: #625d6e; max-width: 420px; margin: 0 auto 28px; }
+    .btn {
+      display: inline-block;
+      background: linear-gradient(115deg, #5646e5, #7c5cf0 55%, #a35df2);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: 13px;
+      box-shadow: 0 10px 24px -10px rgba(86, 70, 229, .55);
+      transition: transform .15s;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .link { display: inline-block; margin-top: 16px; color: #5646e5; font-weight: 600; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="code" aria-hidden="true">404</div>
+    <h1>Такой страницы нет</h1>
+    <p>Возможно, ссылка устарела или в адресе опечатка. Зато все проекты на месте — посмотрите их на главной.</p>
+    <a class="btn" href="/">На главную</a>
+    <br>
+    <a class="link" href="/projects/">Смотреть проекты →</a>
+  </main>
+</body>
+</html>

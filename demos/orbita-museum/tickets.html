@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Билеты — музей «ОРБИТА»</title>
+  <meta name="description" content="Билеты в музей космоса «ОРБИТА»: единый на все залы, детский, семейный и годовой абонемент. Бронирование онлайн.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="ОРБИТА — на главную">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+          <circle cx="13" cy="13" r="5" fill="url(#or)"/>
+          <ellipse cx="13" cy="13" rx="11.5" ry="5.5" stroke="url(#or)" stroke-width="1.8" transform="rotate(-18 13 13)"/>
+          <circle cx="22.5" cy="8.5" r="1.8" fill="#fbbf24"/>
+          <defs><linearGradient id="or" x1="0" y1="0" x2="26" y2="26"><stop stop-color="#fbbf24"/><stop offset="1" stop-color="#fb723c"/></linearGradient></defs>
+        </svg>
+        ОРБИТА
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+        <a href="index.html">Главная</a>
+        <a href="expositions.html">Экспозиции</a>
+        <a href="affiche.html">Афиша</a>
+        <a href="tickets.html" class="is-active" aria-current="page">Билеты</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <a href="#booking" class="btn btn-primary btn-sm header-cta">Забронировать</a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumbs reveal" aria-label="Хлебные крошки">
+          <a href="index.html">Главная</a><span aria-hidden="true">/</span><em>Билеты</em>
+        </nav>
+        <h1 class="reveal" data-delay="1">Билеты <span class="grad-text">на орбиту</span></h1>
+        <p class="page-lead reveal" data-delay="2">Один билет — все залы на весь день. Купольные сеансы входят в стоимость, места лучше бронировать заранее.</p>
+      </div>
+    </section>
+
+    <!-- ============ ТАРИФЫ ============ -->
+    <section class="section flush-top">
+      <div class="container">
+        <div class="cards-grid four tariffs">
+          <article class="card tariff reveal">
+            <h3>Взрослый</h3>
+            <p class="tariff-price">650 ₽</p>
+            <ul>
+              <li>Все залы на весь день</li>
+              <li>Сеансы купола 360°</li>
+              <li>Аудиогид в приложении</li>
+            </ul>
+          </article>
+          <article class="card tariff reveal" data-delay="1">
+            <h3>Детский</h3>
+            <p class="tariff-price">400 ₽</p>
+            <ul>
+              <li>4—14 лет</li>
+              <li>Все залы на весь день</li>
+              <li>Маршрут-квест со стикерами</li>
+            </ul>
+          </article>
+          <article class="card tariff tariff-hot reveal" data-delay="2">
+            <span class="tariff-badge">Выгодно</span>
+            <h3>Семейный</h3>
+            <p class="tariff-price">1 500 ₽</p>
+            <ul>
+              <li>2 взрослых + 2 детских</li>
+              <li>Экономия 800 ₽</li>
+              <li>Фото у макета станции</li>
+            </ul>
+          </article>
+          <article class="card tariff reveal" data-delay="3">
+            <h3>Абонемент</h3>
+            <p class="tariff-price">6 900 ₽</p>
+            <ul>
+              <li>Год без ограничений</li>
+              <li>Лекции и наблюдения</li>
+              <li>Скидка 10% в кафе</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ БРОНИРОВАНИЕ ============ -->
+    <section class="section" id="booking">
+      <div class="container booking-grid">
+        <div class="card booking reveal">
+          <h2>Забронировать визит</h2>
+          <form id="booking-form" novalidate>
+            <fieldset class="field">
+              <legend>Тариф</legend>
+              <div class="pill-group" role="radiogroup" aria-label="Тариф">
+                <label class="pill"><input type="radio" name="tariff" value="650" checked><span>Взрослый</span></label>
+                <label class="pill"><input type="radio" name="tariff" value="400"><span>Детский</span></label>
+                <label class="pill"><input type="radio" name="tariff" value="1500"><span>Семейный</span></label>
+                <label class="pill"><input type="radio" name="tariff" value="6900"><span>Абонемент</span></label>
+              </div>
+            </fieldset>
+            <div class="field-row">
+              <label class="field">
+                <span class="field-label">Дата визита</span>
+                <input type="date" id="visit-date" name="date" required>
+              </label>
+              <label class="field">
+                <span class="field-label">Время (для купола)</span>
+                <select id="visit-time" name="time">
+                  <option value="">Не нужен сеанс</option>
+                  <option>11:00</option>
+                  <option>12:20</option>
+                  <option>13:40</option>
+                  <option>15:00</option>
+                  <option>17:40</option>
+                  <option>19:00</option>
+                </select>
+              </label>
+            </div>
+            <div class="field">
+              <span class="field-label">Количество</span>
+              <div class="stepper">
+                <button type="button" id="qty-dec" aria-label="Меньше">−</button>
+                <span id="qty-value">2</span>
+                <button type="button" id="qty-inc" aria-label="Больше">+</button>
+              </div>
+            </div>
+            <div class="booking-total">
+              <span>Итого</span>
+              <strong id="booking-total">1 300 ₽</strong>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Забронировать</button>
+            <p class="booking-note">Оплата на входе или онлайн. Билет придёт в SMS — покажите QR на входе.</p>
+          </form>
+          <div class="booking-success" id="booking-success" hidden>
+            <p class="cs-ico" aria-hidden="true">🚀</p>
+            <h3>Забронировано!</h3>
+            <p id="booking-summary">—</p>
+            <button type="button" class="btn btn-ghost" id="booking-again">Забронировать ещё</button>
+          </div>
+        </div>
+
+        <aside class="booking-aside reveal" data-delay="1">
+          <div class="card aside-card">
+            <h3>Важно знать</h3>
+            <ul class="check-list">
+              <li>Многодетным семьям — бесплатно по удостоверению</li>
+              <li>Студентам и пенсионерам −40% на кассе</li>
+              <li>Возврат — не позднее чем за 24 часа до визита</li>
+              <li>Купольные сеансы: вход строго до начала</li>
+              <li>Последний вход в залы — в 21:00</li>
+            </ul>
+          </div>
+          <div class="card aside-card">
+            <h3>Вопросы?</h3>
+            <p>Приходите в раздел <a href="contacts.html">«Контакты»</a> — ответим в течение часа с 10:00 до 22:00.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="logo" href="index.html">ОРБИТА</a>
+        <p>Музей космоса будущего.<br>Москва, Космическая наб., 9 · ежедневно 10:00—22:00</p>
+      </div>
+      <nav class="footer-nav" aria-label="Разделы сайта">
+        <a href="index.html">Главная</a>
+        <a href="expositions.html">Экспозиции</a>
+        <a href="affiche.html">Афиша</a>
+        <a href="tickets.html">Билеты</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <p class="footer-copy">© 2026 ОРБИТА. Концепт-демо — кейс для UI/UX-портфолио.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

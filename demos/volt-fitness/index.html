@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VOLT — тренировки в электрическом режиме</title>
+  <meta name="description" content="VOLT — фитнес-приложение с ИИ-планами тренировок, живыми пульсовыми зонами и сериями, которые хочется продолжать.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="logo" href="#top" aria-label="VOLT — на главную">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="url(#volt-l)" stroke="url(#volt-l)" stroke-width="1.4" stroke-linejoin="round"/>
+          <defs><linearGradient id="volt-l" x1="0" y1="0" x2="24" y2="24"><stop stop-color="#a3e635"/><stop offset="1" stop-color="#2dd4bf"/></linearGradient></defs>
+        </svg>
+        VOLT
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+        <a href="#features">Возможности</a>
+        <a href="#programs">Программы</a>
+        <a href="#coaches">Тренеры</a>
+        <a href="#pricing">Тариф</a>
+      </nav>
+      <a href="#pricing" class="btn btn-primary btn-sm header-cta">Скачать</a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="badge reveal"><span class="badge-dot"></span> №1 фитнес-приложение 2026 — премия AppStretch</span>
+          <h1 class="reveal" data-delay="1">Тренируйся в <span class="grad-text">электрическом</span> режиме</h1>
+          <p class="lead reveal" data-delay="2">VOLT составляет план тренировок с помощью ИИ, следит за каждым ударом сердца и превращает регулярность в игру, в которую хочется возвращаться.</p>
+          <div class="hero-actions reveal" data-delay="3">
+            <a href="#pricing" class="btn btn-primary">Начать бесплатно</a>
+            <a href="#features" class="btn btn-ghost">Как это работает</a>
+          </div>
+          <div class="hero-rating reveal" data-delay="3">
+            <span class="stars" aria-label="Оценка 4,9 из 5">★★★★★</span>
+            <span class="rating-text"><strong>4,9</strong> · 82 тыс. отзывов</span>
+          </div>
+          <dl class="hero-stats reveal" data-delay="4">
+            <div><dt>1,2 млн+</dt><dd>активных спортсменов</dd></div>
+            <div><dt>38 млн</dt><dd>тренировок записано</dd></div>
+            <div><dt>94%</dt><dd>выполняют цели недели</dd></div>
+          </dl>
+        </div>
+
+        <!-- Мокап телефона -->
+        <div class="phone-wrap reveal" data-delay="2">
+          <div class="phone" role="img" aria-label="Главный экран приложения VOLT">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="app-top">
+                <div><p class="app-hi">ВТОРНИК, 6:30</p><p class="app-name">Погнали, Алекс ⚡</p></div>
+                <span class="app-avatar" aria-hidden="true">А</span>
+              </div>
+              <div class="app-ring">
+                <svg viewBox="0 0 120 120">
+                  <circle cx="60" cy="60" r="50" class="ring-bg"/>
+                  <circle cx="60" cy="60" r="50" class="ring-val"/>
+                </svg>
+                <div class="ring-center">
+                  <strong>72%</strong>
+                  <span>цель недели</span>
+                </div>
+              </div>
+              <div class="app-chips">
+                <span class="chip"><b>482</b> ккал</span>
+                <span class="chip"><b>42</b> мин</span>
+                <span class="chip"><b>136</b> уд/мин</span>
+              </div>
+              <div class="app-week">
+                <div class="bar" style="--h:45%"><span>Пн</span></div>
+                <div class="bar" style="--h:70%"><span>Вт</span></div>
+                <div class="bar" style="--h:38%"><span>Ср</span></div>
+                <div class="bar is-today" style="--h:85%"><span>Чт</span></div>
+                <div class="bar" style="--h:20%"><span>Пт</span></div>
+                <div class="bar" style="--h:0%"><span>Сб</span></div>
+                <div class="bar" style="--h:0%"><span>Вс</span></div>
+              </div>
+              <div class="app-cta">Верх тела · День жима</div>
+            </div>
+          </div>
+          <div class="float-tag ft-1" aria-hidden="true">🔥 Серия: 21 день</div>
+          <div class="float-tag ft-2" aria-hidden="true">👟 12 480 шагов</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ВОЗМОЖНОСТИ ============ -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Почему VOLT</span>
+          <h2>Больше, чем дневник тренировок</h2>
+          <p class="section-sub">Каждая функция отвечает на один вопрос: заставит ли это тебя вернуться завтра?</p>
+        </div>
+        <div class="features-grid">
+          <article class="card feature reveal">
+            <div class="feature-ico ico-lime" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" stroke-linejoin="round"/></svg></div>
+            <h3>Планы от ИИ</h3>
+            <p>Ответь на 6 вопросов — получи периодизированный план, который каждую неделю подстраивается под твоё восстановление и прогресс.</p>
+          </article>
+          <article class="card feature reveal" data-delay="1">
+            <div class="feature-ico ico-teal" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h4l2-7 4 14 2-7h6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>Живые пульсовые зоны</h3>
+            <p>Подключи любой BLE-датчик пульса и смотри свою зону в реальном времени. Тренируйся в правильной интенсивности, а не наощупь.</p>
+          </article>
+          <article class="card feature reveal" data-delay="2">
+            <div class="feature-ico ico-lime" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="9" r="5"/><path d="M8.5 13.5 7 22l5-3 5 3-1.5-8.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>Серии и квесты</h3>
+            <p>Ежедневные квесты, бейджи и лиги с друзьями. Наука о привычках в игровой форме — без кринжа.</p>
+          </article>
+          <article class="card feature reveal">
+            <div class="feature-ico ico-teal" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 8a5 5 0 1 0-10 0c0 4-3 5-3 7h16c0-2-3-3-3-7z" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 21h4" stroke-linecap="round"/></svg></div>
+            <h3>Оценка восстановления</h3>
+            <p>Сон, вариабельность пульса и болезненность мышц превращаются каждое утро в одно число. VOLT перестраивает твою неделю вокруг него.</p>
+          </article>
+          <article class="card feature reveal" data-delay="1">
+            <div class="feature-ico ico-lime" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V10m5.5 10V4M15 20v-8m5.5 8V7" stroke-linecap="round"/></svg></div>
+            <h3>Прогресс, который видно</h3>
+            <p>Объём, оценка 1ПМ и метрики тела на понятных графиках, которые правда хочется открывать. Экспорт — в любой момент.</p>
+          </article>
+          <article class="card feature reveal" data-delay="2">
+            <div class="feature-ico ico-teal" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6" stroke-linecap="round"/><circle cx="17.5" cy="9.5" r="2.5"/><path d="M16 14.5c3-.5 5.5 1.5 5.5 5" stroke-linecap="round"/></svg></div>
+            <h3>Тренируйся вместе</h3>
+            <p>Совместные тренировки с живыми лидербордами. Соревнуйся в повторениях, а не в том, кто выше на фото.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ПРОГРАММЫ ============ -->
+    <section class="section section-alt" id="programs">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Программы</span>
+          <h2>Найди свою частоту</h2>
+        </div>
+        <div class="programs-grid">
+          <a href="#pricing" class="program reveal">
+            <div class="prog-art art-strength" aria-hidden="true">🏋️</div>
+            <div class="prog-body">
+              <span class="prog-level">Средний уровень</span>
+              <h3>Железная база</h3>
+              <p>Работа со штангой 4 дня в неделю. Линейная прогрессия с умными разгрузочными неделями.</p>
+              <span class="prog-meta">8 недель · 45 мин</span>
+            </div>
+          </a>
+          <a href="#pricing" class="program reveal" data-delay="1">
+            <div class="prog-art art-hiit" aria-hidden="true">⚡</div>
+            <div class="prog-body">
+              <span class="prog-level">Все уровни</span>
+              <h3>HIIT «Вольтаж»</h3>
+              <p>20-минутные электрические интервалы, синхронизированные с твоими пульсовыми зонами. Без оборудования.</p>
+              <span class="prog-meta">4 недели · 20 мин</span>
+            </div>
+          </a>
+          <a href="#pricing" class="program reveal" data-delay="2">
+            <div class="prog-art art-run" aria-hidden="true">🏃</div>
+            <div class="prog-body">
+              <span class="prog-level">Новичок</span>
+              <h3>С нуля до 10К</h3>
+              <p>Прогрессия «бег — ходьба» с аудиотренером, который реагирует на твой темп и пульс в реальном времени.</p>
+              <span class="prog-meta">10 недель · 30 мин</span>
+            </div>
+          </a>
+          <a href="#pricing" class="program reveal" data-delay="3">
+            <div class="prog-art art-yoga" aria-hidden="true">🧘</div>
+            <div class="prog-body">
+              <span class="prog-level">Все уровни</span>
+              <h3>Перезарядка</h3>
+              <p>Мобильность и дыхательные практики для дней отдыха. Планируются автоматически после самых тяжёлых сессий.</p>
+              <span class="prog-meta">Постоянно · 15 мин</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ТРЕНЕРЫ ============ -->
+    <section class="section" id="coaches">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Тренеры</span>
+          <h2>За ИИ стоят живые люди</h2>
+          <p class="section-sub">Каждый план VOLT проверяют сертифицированные тренеры. Трое из них:</p>
+        </div>
+        <div class="coaches-grid">
+          <article class="card coach reveal">
+            <span class="coach-avatar ca-1" aria-hidden="true">ДК</span>
+            <h3>Дана Ким</h3>
+            <p class="coach-role">Сила · CSCS</p>
+            <p class="coach-bio">Экс-пауэрлифтер, 11 лет тренерского стажа. Собирает блоки «Железной базы».</p>
+          </article>
+          <article class="card coach reveal" data-delay="1">
+            <span class="coach-avatar ca-2" aria-hidden="true">МР</span>
+            <h3>Марко Рейес</h3>
+            <p class="coach-role">Бег · UESCA</p>
+            <p class="coach-bio">Марафонец, ставший тренером. Одержим тем, чтобы новички бегали без травм.</p>
+          </article>
+          <article class="card coach reveal" data-delay="2">
+            <span class="coach-avatar ca-3" aria-hidden="true">ЛС</span>
+            <h3>Лена Сато</h3>
+            <p class="coach-role">Мобильность · RYT-500</p>
+            <p class="coach-bio">Придумывает «Перезарядку» так, чтобы день отдыха ощущался как тренировка, а не как пропуск.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ОТЗЫВЫ ============ -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Результаты</span>
+          <h2>Серии, которые закрепились</h2>
+        </div>
+        <div class="testi-grid">
+          <figure class="card testi reveal">
+            <div class="stars" aria-label="5 из 5 звёзд">★★★★★</div>
+            <blockquote>«Оценка восстановления дважды остановила меня от выгорания. Первое фитнес-приложение, которое нагружало меня меньше именно тогда, когда это было нужно.»</blockquote>
+            <figcaption><span class="avatar av-1">Й</span><span><strong>Йонас, 29 лет</strong><br>— −14 кг, серия 200 дней</span></figcaption>
+          </figure>
+          <figure class="card testi reveal" data-delay="1">
+            <div class="stars" aria-label="5 из 5 звёзд">★★★★★</div>
+            <blockquote>«"С нуля до 10К" звучало как маркетинг. Шестнадцать недель спустя я записался на полумарафон. Аудиотренер — нереальный.»</blockquote>
+            <figcaption><span class="avatar av-2">П</span><span><strong>Прия, 34 года</strong><br>— первый полумарафон</span></figcaption>
+          </figure>
+          <figure class="card testi reveal" data-delay="2">
+            <div class="stars" aria-label="5 из 5 звёзд">★★★★★</div>
+            <blockquote>«Битвы в лиге с братом заставляли идти в зал в дни, когда почти победил Netflix. Мелочно? Да. Эффективно? Тоже да.»</blockquote>
+            <figcaption><span class="avatar av-3">Т</span><span><strong>Том, 25 лет</strong><br>— 5 тренировок в неделю 8 месяцев</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ТАРИФ ============ -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Тариф</span>
+          <h2>Один тариф. Всё включено.</h2>
+          <p class="section-sub">Без уровней и допродаж. Отмена — в два касания.</p>
+        </div>
+        <div class="pricing-grid">
+          <article class="card price reveal">
+            <h3>Бесплатно</h3>
+            <p class="price-value">0 ₽<span>/навсегда</span></p>
+            <ul class="price-list">
+              <li>3 тренировки в неделю</li>
+              <li>Базовые графики прогресса</li>
+              <li>1 программа на выбор</li>
+            </ul>
+            <a href="#" class="btn btn-ghost btn-block">Скачать бесплатно</a>
+          </article>
+          <article class="card price price-featured reveal" data-delay="1">
+            <span class="price-badge">Лучшая цена</span>
+            <h3>VOLT Pro</h3>
+            <p class="price-value">490 ₽<span>/месяц</span></p>
+            <ul class="price-list">
+              <li>Безлимит тренировок и программ</li>
+              <li>Адаптивные планы от ИИ</li>
+              <li>Живые пульсовые зоны и оценка восстановления</li>
+              <li>Лиги, квесты и совместные тренировки</li>
+              <li>Полный экспорт данных</li>
+            </ul>
+            <a href="#" class="btn btn-primary btn-block">Начать 30-дневный триал</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-panel reveal">
+          <h2>Тренировка на завтра <span class="grad-text">уже составлена</span></h2>
+          <p>Скачай VOLT, ответь на 6 вопросов и просто приди в зал. Это весь онбординг.</p>
+          <div class="store-badges" aria-hidden="true">
+            <span class="store-badge">▸ App Store</span>
+            <span class="store-badge">▸ Google Play</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="logo" href="#top">VOLT</a>
+        <p>Тренируйся в электрическом режиме.<br>Сделано для тех, кто пропускает день ног.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Разделы сайта">
+        <a href="#features">Возможности</a>
+        <a href="#programs">Программы</a>
+        <a href="#pricing">Тариф</a>
+        <a href="#top">Поддержка</a>
+      </nav>
+      <p class="footer-copy">© 2026 VOLT Labs. Концепт-демо — кейс для UI/UX-портфолио.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

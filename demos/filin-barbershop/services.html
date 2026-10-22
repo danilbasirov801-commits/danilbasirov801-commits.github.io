@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Услуги и цены — барбершоп «ФИЛИН»</title>
+  <meta name="description" content="Прайс барбершопа «Филин»: стрижки, бороды, комплексы и уход. Выберите услугу и запишитесь онлайн.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="ФИЛИН — на главную">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+          <rect x="2" y="2" width="22" height="22" rx="4" stroke="#c9a26b" stroke-width="2"/>
+          <circle cx="9.5" cy="11" r="1.7" fill="#c9a26b"/>
+          <circle cx="16.5" cy="11" r="1.7" fill="#c9a26b"/>
+          <path d="M9 16.5c1.3 1.2 2.6 1.8 4 1.8s2.7-.6 4-1.8" stroke="#c9a26b" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M13 2v4M6.5 3.5 8 6.5M19.5 3.5 18 6.5" stroke="#c9a26b" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+        ФИЛИН
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+        <a href="index.html">Главная</a>
+        <a href="services.html" class="is-active" aria-current="page">Услуги</a>
+        <a href="masters.html">Мастера</a>
+        <a href="appointments.html">Мои записи</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <a href="booking.html" class="btn btn-brass btn-sm header-cta">Записаться</a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="kicker">Прайс-лист</p>
+        <h1>Услуги <span class="accent">и цены</span></h1>
+        <p class="page-lead">Всё честно: цена не меняется от длины волос и настроения мастера. Выберите услугу — подставим её в форму записи.</p>
+      </div>
+    </section>
+
+    <section class="section flush-top">
+      <div class="container">
+        <div class="filters reveal" role="group" aria-label="Фильтр по категориям">
+          <button class="chip is-active" data-filter="all">Все</button>
+          <button class="chip" data-filter="hair">Стрижки</button>
+          <button class="chip" data-filter="beard">Борода</button>
+          <button class="chip" data-filter="complex">Комплексы</button>
+          <button class="chip" data-filter="care">Уход</button>
+        </div>
+
+        <div class="price-table">
+          <!-- Стрижки -->
+          <a href="booking.html" class="price-row reveal" data-service="s1" data-cat="hair">
+            <span class="pr-name">Мужская стрижка<em>ножницы, машинка и разговор по делу</em></span>
+            <span class="pr-meta">60 мин</span>
+            <span class="pr-price">2 000 ₽</span>
+            <span class="pr-go">Записаться</span>
+          </a>
+          <a href="booking.html" class="price-row reveal" data-service="s2" data-cat="hair">
+            <span class="pr-name">Стрижка машинкой<em>одна длина, ровная окантовка</em></span>
+            <span class="pr-meta">30 мин</span>
+            <span class="pr-price">1 200 ₽</span>
+            <span class="pr-go">Записаться</span>
+          </a>
+          <a href="booking.html" class="price-row reveal" data-service="s3" data-cat="hair">
+            <span class="pr-name">Фейд / кроп<em>плавные переходы и чёткие линии</em></span>
+            <span class="pr-meta">60 мин</span>
+            <span class="pr-price">2 200 ₽</span>
+            <span class="pr-go">Записаться</span>
+          </a>
+          <a href="booking.html" class="price-row reveal" data-service="s4" data-cat="hair">
+            <span class="pr-name">Детская стрижка<em>до 12 лет, с мультиком и терпением</em></span>
+            <span class="pr-meta">45 мин</span>
+            <span class="pr-price">1 400 ₽</span>
+            <span class="pr-go">Записаться</span>
+          </a>
+
+          <!-- Борода -->
+          <a href="booking.html" class="price-row reveal" data-service="b1" data-cat="beard">
+            <span class="pr-name">Оформление бороды<em>форма, окантовка, горячее полотенце</em></span>
+            <span class="pr-meta">45 мин</span>
+            <span class="pr-price">1 500 ₽</span>
+            <span class="pr-go">Записаться</span>
+          </a>
+          <a href="booking.html" class="price-row reveal" data-service="b2" data-cat="beard">
+            <span class="pr-name">Бритьё опасной бритвой<em>как у дедушки, только безопаснее</em></span>
+            <span class="pr-meta">45 мин</span>
+            <span class="pr-price">1 800 ₽</span>
+            <span class="pr-go">Записаться</span>
+          </a>
+          <a href="booking.html" class="price-row reveal" data-service="b3" data-cat="beard">
+            <span class="pr-name">Окантовка бороды<em>быстро привести в порядок шею</em></span>
+            <span class="pr-meta">20 мин</span>
+            <span class="pr-price">900 ₽</span>
+            <span class="pr-go">Записаться</span>
+          </a>
+
+          <!-- Комплексы -->
+          <a href="booking.html" class="price-row price-row-hot reveal" data-service="c1" data-cat="complex">
+            <span class="pr-tag">хит</span>
+            <span class="pr-name">«Филин»: стрижка + борода<em>полный ритуал, как у постоянных</em></span>
+            <span class="pr-meta">90 мин</span>
+            <span class="pr-price">3 200 ₽</span>
+            <span class="pr-go">Записаться</span>
+          </a>
+          <a href="booking.html" class="price-row reveal" data-service="c2" data-cat="complex">
+            <span class="pr-name">«Отец и сын»<em>две стрижки подряд с перерывом на какао</em></span>
+            <span class="pr-meta">90 мин</span>
+            <span class="pr-price">3 000 ₽</span>
+            <span class="pr-go">Записаться</span>
+          </a>
+          <a href="booking.html" class="price-row reveal" data-service="c3" data-cat="complex">
+            <span class="pr-name">«Всё включено»<em>стрижка, борода, уход и камуфляж</em></span>
+            <span class="pr-meta">120 мин</span>
+            <span class="pr-price">4 500 ₽</span>
+            <span class="pr-go">Записаться</span>
+          </a>
+
+          <!-- Уход -->
+          <a href="booking.html" class="price-row reveal" data-service="u1" data-cat="care">
+            <span class="pr-name">Камуфляж седины<em>аккуратно, без «окрашенного» эффекта</em></span>
+            <span class="pr-meta">45 мин</span>
+            <span class="pr-price">1 600 ₽</span>
+            <span class="pr-go">Записаться</span>
+          </a>
+          <a href="booking.html" class="price-row reveal" data-service="u2" data-cat="care">
+            <span class="pr-name">Уход за бородой<em>распаривание, масло, укладка гребнем</em></span>
+            <span class="pr-meta">20 мин</span>
+            <span class="pr-price">800 ₽</span>
+            <span class="pr-go">Записаться</span>
+          </a>
+          <a href="booking.html" class="price-row reveal" data-service="u3" data-cat="care">
+            <span class="pr-name">Чёрный пилинг лица<em>после — как после отпуска</em></span>
+            <span class="pr-meta">30 мин</span>
+            <span class="pr-price">1 700 ₽</span>
+            <span class="pr-go">Записаться</span>
+          </a>
+          <a href="booking.html" class="price-row reveal" data-service="u4" data-cat="care">
+            <span class="pr-name">Тонирование волос<em>убрать желтизну, добавить плотность</em></span>
+            <span class="pr-meta">45 мин</span>
+            <span class="pr-price">1 900 ₽</span>
+            <span class="pr-go">Записаться</span>
+          </a>
+        </div>
+
+        <p class="empty-note" id="empty-note" hidden>В этой категории пока пусто.</p>
+
+        <div class="notice reveal">
+          <strong>Постоянным гостям:</strong> каждая шестая стрижка — со скидкой 50%. Скидка считается автоматически по номеру телефона, карта не нужна.
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-panel reveal">
+          <h2>Не знаете, что выбрать?</h2>
+          <p>Приходите на консультацию — осмотрим, посоветуем и не навяжем лишнего.</p>
+          <a href="booking.html" class="btn btn-brass btn-lg">Записаться</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="index.html">ФИЛИН</a>
+        <p>Барбершоп на Дегтярном, 3.<br>Стрижки, бороды, виски и разговоры.</p>
+      </div>
+      <nav class="footer-col" aria-label="Разделы сайта">
+        <h3>Разделы</h3>
+        <a href="index.html">Главная</a>
+        <a href="services.html">Услуги</a>
+        <a href="masters.html">Мастера</a>
+        <a href="booking.html">Запись онлайн</a>
+        <a href="appointments.html">Мои записи</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <div class="footer-col">
+        <h3>Режим работы</h3>
+        <p>Пн — Вс, 10:00 — 21:00<br>Без выходных</p>
+        <p>Касса до 20:30</p>
+      </div>
+      <div class="footer-col">
+        <h3>Связь</h3>
+        <p><a href="tel:+74950000000">+7 (495) 000-00-00</a></p>
+        <p><a href="mailto:hi@filin.shop">hi@filin.shop</a></p>
+        <p class="footer-socials"><a href="index.html">VK</a> · <a href="index.html">Telegram</a> · <a href="index.html">WhatsApp</a></p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 Барбершоп «Филин». Концепт-демо — кейс для UI/UX-портфолио.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

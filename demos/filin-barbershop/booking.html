@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Запись онлайн — барбершоп «ФИЛИН»</title>
+  <meta name="description" content="Онлайн-запись в барбершоп «Филин»: услуга, мастер, дата и время за четыре шага. Подтверждение сразу, без звонка.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="ФИЛИН — на главную">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+          <rect x="2" y="2" width="22" height="22" rx="4" stroke="#c9a26b" stroke-width="2"/>
+          <circle cx="9.5" cy="11" r="1.7" fill="#c9a26b"/>
+          <circle cx="16.5" cy="11" r="1.7" fill="#c9a26b"/>
+          <path d="M9 16.5c1.3 1.2 2.6 1.8 4 1.8s2.7-.6 4-1.8" stroke="#c9a26b" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M13 2v4M6.5 3.5 8 6.5M19.5 3.5 18 6.5" stroke="#c9a26b" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+        ФИЛИН
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+        <a href="index.html">Главная</a>
+        <a href="services.html">Услуги</a>
+        <a href="masters.html">Мастера</a>
+        <a href="appointments.html">Мои записи</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <a href="services.html" class="btn btn-brass btn-sm header-cta">Услуги</a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="kicker">Запись онлайн</p>
+        <h1>Четыре шага <span class="accent">до кресла</span></h1>
+        <p class="page-lead">Подтверждаем сразу. Если планы изменятся — отменить можно в разделе «Мои записи».</p>
+      </div>
+    </section>
+
+    <section class="section flush-top booking-section">
+      <div class="container booking-layout">
+        <div class="wizard card-flat">
+          <!-- Шаги -->
+          <ol class="steps" id="steps" aria-label="Шаги записи">
+            <li class="step is-current" data-step="1"><span class="step-n">1</span><span class="step-name">Услуга</span></li>
+            <li class="step" data-step="2"><span class="step-n">2</span><span class="step-name">Мастер</span></li>
+            <li class="step" data-step="3"><span class="step-n">3</span><span class="step-name">Дата и время</span></li>
+            <li class="step" data-step="4"><span class="step-n">4</span><span class="step-name">Подтверждение</span></li>
+          </ol>
+
+          <div class="step-error" id="step-error" role="alert" hidden></div>
+
+          <!-- Шаг 1: услуга -->
+          <div class="wizard-panel" data-panel="1">
+            <h2 class="wizard-title">Что делаем?</h2>
+            <div class="service-options" id="service-options" role="radiogroup" aria-label="Выбор услуги"></div>
+          </div>
+
+          <!-- Шаг 2: мастер -->
+          <div class="wizard-panel" data-panel="2" hidden>
+            <h2 class="wizard-title">Кто стрижёт?</h2>
+            <div class="master-options" id="master-options" role="radiogroup" aria-label="Выбор мастера"></div>
+          </div>
+
+          <!-- Шаг 3: дата и время -->
+          <div class="wizard-panel" data-panel="3" hidden>
+            <h2 class="wizard-title">Когда вам удобно?</h2>
+            <div class="datetime-grid">
+              <div class="cal-block">
+                <div class="cal-head">
+                  <button type="button" class="cal-nav" id="cal-prev" aria-label="Предыдущая неделя">←</button>
+                  <span id="cal-label">сентябрь 2026</span>
+                  <button type="button" class="cal-nav" id="cal-next" aria-label="Следующая неделя">→</button>
+                </div>
+                <div class="cal-weekdays" aria-hidden="true">
+                  <span>пн</span><span>вт</span><span>ср</span><span>чт</span><span>пт</span><span>сб</span><span>вс</span>
+                </div>
+                <div class="cal-grid" id="cal-grid"></div>
+                <p class="cal-hint">Работаем без выходных. Запись открыта на 14 дней вперёд.</p>
+              </div>
+              <div class="slots-block">
+                <h3 class="slots-title" id="slots-title">Выберите день</h3>
+                <div class="slots-grid" id="slots-grid"></div>
+                <p class="slots-empty" id="slots-empty">Сначала выберите дату в календаре.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Шаг 4: подтверждение -->
+          <div class="wizard-panel" data-panel="4" hidden>
+            <h2 class="wizard-title">Проверьте и подтвердите</h2>
+            <div class="review" id="review-box"></div>
+            <form id="client-form" novalidate>
+              <label class="field">
+                <span class="field-label">Имя *</span>
+                <input type="text" id="bf-name" name="name" placeholder="Как к вам обращаться" autocomplete="name" required>
+              </label>
+              <label class="field">
+                <span class="field-label">Телефон *</span>
+                <input type="tel" id="bf-phone" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
+              </label>
+              <label class="field">
+                <span class="field-label">Комментарий мастеру</span>
+                <textarea id="bf-note" name="note" rows="2" placeholder="«Не коротко сверху», «после работы в 19:40»…"></textarea>
+              </label>
+            </form>
+          </div>
+
+          <!-- Успех -->
+          <div class="wizard-success" id="wizard-success" hidden>
+            <p class="ws-ico" aria-hidden="true">✂</p>
+            <h2>Вы записаны!</h2>
+            <p id="success-summary">—</p>
+            <div class="ws-actions">
+              <a href="appointments.html" class="btn btn-brass">Мои записи</a>
+              <a href="index.html" class="btn btn-line">На главную</a>
+            </div>
+          </div>
+
+          <!-- Навигация -->
+          <div class="wizard-nav" id="wizard-nav">
+            <button type="button" class="btn btn-line" id="btn-back" disabled>Назад</button>
+            <button type="button" class="btn btn-brass" id="btn-next">Далее</button>
+          </div>
+        </div>
+
+        <!-- Сводка -->
+        <aside class="booking-summary card-flat" aria-label="Ваша запись">
+          <h3>Ваша запись</h3>
+          <dl class="summary-list">
+            <div><dt>Услуга</dt><dd id="sum-service">—</dd></div>
+            <div><dt>Длительность</dt><dd id="sum-duration">—</dd></div>
+            <div><dt>Мастер</dt><dd id="sum-master">—</dd></div>
+            <div><dt>Дата</dt><dd id="sum-date">—</dd></div>
+            <div><dt>Время</dt><dd id="sum-time">—</dd></div>
+          </dl>
+          <div class="summary-total">
+            <span>Итого на месте</span>
+            <strong id="sum-price">—</strong>
+          </div>
+          <p class="summary-note">Оплата после стрижки. Отмена — свободная, но пожалуйста, не за 10 минут до.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="index.html">ФИЛИН</a>
+        <p>Барбершоп на Дегтярном, 3.<br>Стрижки, бороды, виски и разговоры.</p>
+      </div>
+      <nav class="footer-col" aria-label="Разделы сайта">
+        <h3>Разделы</h3>
+        <a href="index.html">Главная</a>
+        <a href="services.html">Услуги</a>
+        <a href="masters.html">Мастера</a>
+        <a href="booking.html">Запись онлайн</a>
+        <a href="appointments.html">Мои записи</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <div class="footer-col">
+        <h3>Режим работы</h3>
+        <p>Пн — Вс, 10:00 — 21:00<br>Без выходных</p>
+        <p>Касса до 20:30</p>
+      </div>
+      <div class="footer-col">
+        <h3>Связь</h3>
+        <p><a href="tel:+74950000000">+7 (495) 000-00-00</a></p>
+        <p><a href="mailto:hi@filin.shop">hi@filin.shop</a></p>
+        <p class="footer-socials"><a href="index.html">VK</a> · <a href="index.html">Telegram</a> · <a href="index.html">WhatsApp</a></p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 Барбершоп «Филин». Концепт-демо — кейс для UI/UX-портфолио.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>

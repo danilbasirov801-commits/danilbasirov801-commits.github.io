@@ -1,0 +1,114 @@
+/* ============================================================================
+   PAGES.CSS — стили отдельных страниц: список проектов, страница кейса,
+   «Обо мне», «Контакты».
+   ========================================================================== */
+
+/* --- Заголовок внутренней страницы ------------------------------------------ */
+
+.page-head { padding: 76px 0 44px; }
+
+.page-title { font-size: clamp(2rem, 4.6vw, 3.1rem); }
+
+.page-meta {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+/* --- Страница «Проекты»: фильтры ------------------------------------------------ */
+
+.filters { display: flex; flex-wrap: wrap; gap: 9px; margin-bottom: 40px; }
+
+/* --- Страница кейса ---------------------------------------------------------------- */
+
+.case-head { padding: 60px 0 40px; }
+
+.case-title { font-size: clamp(1.7rem, 4vw, 2.7rem); max-width: 880px; }
+
+.case-lead {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 18px;
+  max-width: 720px;
+}
+
+.case-cover {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  box-shadow: var(--shadow-md);
+}
+.case-cover img { width: 100%; aspect-ratio: 16 / 8; object-fit: cover; }
+
+.case-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 330px;
+  gap: 48px;
+  padding: 56px 0 24px;
+  align-items: start;
+}
+
+.case-text h2 { font-size: 22px; margin-bottom: 20px; }
+.case-text p { color: var(--muted); margin-bottom: 16px; max-width: 660px; }
+.case-text strong { color: var(--ink); font-weight: 600; }
+
+.next-case { padding: 48px 0 88px; }
+.next-case a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  text-decoration: none;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 26px 30px;
+  transition: border-color .15s, transform .15s, box-shadow .15s;
+}
+.next-case a:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.next-case .label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--muted);
+}
+.next-case .name { font-size: 19px; font-weight: 700; margin-top: 5px; letter-spacing: -0.01em; }
+.next-case .arrow { font-size: 26px; color: var(--accent); }
+
+/* Страница не найдена (404.html) */
+.notfound { padding: 96px 0 110px; text-align: center; }
+.notfound h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 14px; }
+.notfound p { color: var(--muted); max-width: 480px; margin: 0 auto 28px; }
+
+/* --- Страница «Обо мне» -------------------------------------------------------------- */
+
+.about-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 56px;
+  align-items: start;
+  padding: 76px 0 24px;
+}
+
+.about-hero h1 { font-size: clamp(2rem, 4.6vw, 3rem); margin-bottom: 22px; }
+.about-hero .bio p { color: var(--muted); margin-bottom: 16px; max-width: 660px; }
+.about-hero .bio strong { color: var(--ink); font-weight: 600; }
+
+/* --- Страница «Контакты» --------------------------------------------------------------- */
+
+.contact-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 8px;
+}
+
+/* Нечётное число контактов: последняя карточка занимает весь ряд */
+.contact-list .contact-row:last-child:nth-child(odd) { grid-column: 1 / -1; }

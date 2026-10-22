@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>АКСИОМА — математика, которую можно потрогать</title>
+  <meta name="description" content="Интерактивный учебник: тянущийся треугольник, парабола на слайдерах, квиз и пошаговые решения.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,600;0,700;1,600&family=Onest:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#top">АКСИ<span>ОМА</span></a>
+      <nav class="site-nav" id="site-nav" aria-label="Разделы">
+        <a href="#triangle">Треугольник</a>
+        <a href="#functions">Функции</a>
+        <a href="#quiz">Квиз</a>
+        <a href="#steps">Разбор</a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="kicker mono reveal">интерактивный учебник · без формул наизусть</p>
+          <h1 class="reveal" data-delay="1">Математика, которую<br><em>можно потрогать</em></h1>
+          <p class="lead reveal" data-delay="2">Тяните вершины треугольника и смотрите, как живут углы и площади. Крутите коэффициенты параболы. Решайте, ошибайтесь, разбирайте по шагам.</p>
+          <div class="hero-actions reveal" data-delay="3">
+            <a href="#triangle" class="btn btn-accent">Начать с геометрии</a>
+            <a href="#quiz" class="btn btn-line">Проверить себя</a>
+          </div>
+        </div>
+        <div class="hero-shape reveal" data-delay="2" aria-hidden="true">
+          <svg viewBox="0 0 220 220" width="320" height="320">
+            <defs>
+              <linearGradient id="morph-grad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#6c5ce7"/>
+                <stop offset="1" stop-color="#e05fa8"/>
+              </linearGradient>
+            </defs>
+            <g id="morph-group">
+              <polygon id="morph-path" fill="url(#morph-grad)" fill-opacity="0.14" stroke="url(#morph-grad)" stroke-width="2.5" stroke-linejoin="round"/>
+            </g>
+          </svg>
+          <p class="shape-caption mono">фигура №<span id="shape-idx">1</span> · морфинг продолжается</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ТРЕУГОЛЬНИК ============ -->
+    <section class="section" id="triangle">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow mono">01 · Геометрия</span>
+          <h2>Треугольник, который слушается рук</h2>
+          <p class="section-sub">Потяните за любую вершину — стороны, углы, периметр и площадь пересчитываются на лету.</p>
+        </div>
+        <div class="tri-grid">
+          <div class="board reveal">
+            <svg id="tri-svg" viewBox="0 0 440 400">
+              <defs>
+                <pattern id="grid-pat" width="22" height="22" patternUnits="userSpaceOnUse">
+                  <path d="M22 0H0V22" fill="none" stroke="#e2e5f3" stroke-width="1"/>
+                </pattern>
+              </defs>
+              <rect width="440" height="400" fill="url(#grid-pat)"/>
+              <polygon id="tri-face" fill="rgba(108,92,231,0.09)" stroke="none"/>
+              <path id="tri-arcs" fill="none"/>
+              <polygon id="tri-line" fill="none" stroke="#6c5ce7" stroke-width="2.5" stroke-linejoin="round"/>
+              <g id="tri-labels"></g>
+              <g id="tri-handles"></g>
+            </svg>
+          </div>
+          <div class="tri-readout card-flat reveal" data-delay="1">
+            <p class="ro-title mono">показания</p>
+            <div class="ro-block">
+              <p class="ro-label mono">вершины</p>
+              <p class="ro-line mono" id="ro-verts"></p>
+            </div>
+            <div class="ro-block">
+              <p class="ro-label mono">стороны</p>
+              <p class="ro-line mono" id="ro-sides"></p>
+            </div>
+            <div class="ro-block">
+              <p class="ro-label mono">углы</p>
+              <p class="ro-line mono" id="ro-angles"></p>
+              <p class="ro-line mono dim" id="ro-sum"></p>
+            </div>
+            <div class="ro-block ro-pair">
+              <div><p class="ro-label mono">периметр</p><p class="ro-big mono" id="ro-perim"></p></div>
+              <div><p class="ro-label mono">площадь</p><p class="ro-big mono" id="ro-area"></p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ПАРАБОЛА ============ -->
+    <section class="section section-tint" id="functions">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow mono">02 · Алгебра</span>
+          <h2>Парабола на трёх слайдерах</h2>
+          <p class="section-sub">Меняйте коэффициенты — график, вершина, дискриминант и корни перестраиваются в реальном времени.</p>
+        </div>
+        <div class="fn-grid">
+          <div class="board reveal">
+            <canvas id="fn-canvas" width="640" height="440"></canvas>
+          </div>
+          <div class="fn-controls card-flat reveal" data-delay="1">
+            <p class="fn-formula" id="fn-formula">y = x²</p>
+            <label class="fn-slider">
+              <span class="mono">a = <b id="val-a">1.0</b></span>
+              <input type="range" id="sl-a" min="-3" max="3" step="0.1" value="1">
+            </label>
+            <label class="fn-slider">
+              <span class="mono">b = <b id="val-b">0.0</b></span>
+              <input type="range" id="sl-b" min="-6" max="6" step="0.1" value="0">
+            </label>
+            <label class="fn-slider">
+              <span class="mono">c = <b id="val-c">0.0</b></span>
+              <input type="range" id="sl-c" min="-6" max="6" step="0.1" value="0">
+            </label>
+            <div class="fn-readout mono">
+              <p id="fn-vertex">вершина: (0.0; 0.0)</p>
+              <p id="fn-d">D = b² − 4ac = 0</p>
+              <p id="fn-roots">корни: x = 0</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ КВИЗ ============ -->
+    <section class="section" id="quiz">
+      <div class="container container-narrow">
+        <div class="section-head reveal">
+          <span class="eyebrow mono">03 · Проверка</span>
+          <h2>Мини-квиз на четыре вопроса</h2>
+          <p class="section-sub">Отвечайте не спеша: правильный ответ подсветится, даже если промахнулись.</p>
+        </div>
+        <div class="quiz card-flat reveal">
+          <div class="quiz-top">
+            <span class="mono" id="quiz-step">вопрос 1 из 4</span>
+            <span class="quiz-dots" id="quiz-dots"></span>
+            <span class="mono" id="quiz-score">счёт: 0</span>
+          </div>
+          <div id="quiz-body">
+            <h3 class="quiz-q" id="quiz-q"></h3>
+            <div class="quiz-opts" id="quiz-opts"></div>
+          </div>
+          <div class="quiz-done" id="quiz-done" hidden>
+            <div class="quiz-ring"><span id="quiz-final">4/4</span></div>
+            <p class="quiz-verdict" id="quiz-verdict"></p>
+            <button class="btn btn-accent" id="quiz-restart" type="button">Пройти снова</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ПОШАГОВЫЙ РАЗБОР ============ -->
+    <section class="section section-tint" id="steps">
+      <div class="container container-narrow">
+        <div class="section-head reveal">
+          <span class="eyebrow mono">04 · Разбор</span>
+          <h2>Решение по шагам, строчка за строчкой</h2>
+          <p class="section-sub">Нажимайте «дальше» — каждая строка появляется тогда, когда вы к ней готовы.</p>
+        </div>
+        <div class="steps card-flat reveal">
+          <div class="steps-tabs" role="tablist">
+            <button class="steps-tab is-active" data-ex="disc" type="button">Дискриминант</button>
+            <button class="steps-tab" data-ex="pyth" type="button">Теорема Пифагора</button>
+          </div>
+          <div class="steps-progress"><i id="steps-fill"></i></div>
+          <p class="steps-count mono" id="steps-count">шаг 0 из 0</p>
+          <ol class="steps-list" id="steps-list"></ol>
+          <div class="steps-actions">
+            <button class="btn btn-accent" id="steps-next" type="button">Дальше →</button>
+            <button class="btn btn-line" id="steps-all" type="button">Показать всё</button>
+            <button class="btn btn-line" id="steps-reset" type="button">С начала</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><span class="logo-mini">АКСИОМА</span> · интерактивный учебник</p>
+      <p>© 2026 · Концепт-демо — кейс для UI/UX-портфолио</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

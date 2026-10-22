@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Афиша — музей «ОРБИТА»</title>
+  <meta name="description" content="Афиша музея космоса «ОРБИТА»: сеансы в куполе 360°, лекции, мастер-классы и ночные наблюдения.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="ОРБИТА — на главную">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+          <circle cx="13" cy="13" r="5" fill="url(#or)"/>
+          <ellipse cx="13" cy="13" rx="11.5" ry="5.5" stroke="url(#or)" stroke-width="1.8" transform="rotate(-18 13 13)"/>
+          <circle cx="22.5" cy="8.5" r="1.8" fill="#fbbf24"/>
+          <defs><linearGradient id="or" x1="0" y1="0" x2="26" y2="26"><stop stop-color="#fbbf24"/><stop offset="1" stop-color="#fb723c"/></linearGradient></defs>
+        </svg>
+        ОРБИТА
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+        <a href="index.html">Главная</a>
+        <a href="expositions.html">Экспозиции</a>
+        <a href="affiche.html" class="is-active" aria-current="page">Афиша</a>
+        <a href="tickets.html">Билеты</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <a href="tickets.html" class="btn btn-primary btn-sm header-cta">Купить билет</a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumbs reveal" aria-label="Хлебные крошки">
+          <a href="index.html">Главная</a><span aria-hidden="true">/</span><em>Афиша</em>
+        </nav>
+        <h1 class="reveal" data-delay="1">Афиша <span class="grad-text">недели</span></h1>
+        <p class="page-lead reveal" data-delay="2">Сеансы, лекции, мастер-классы и наблюдения с 25 по 28 сентября. Крупные события бронируйте заранее.</p>
+      </div>
+    </section>
+
+    <section class="section flush-top">
+      <div class="container">
+        <div class="tabs reveal" role="tablist" aria-label="Дни афиши">
+          <button class="tab" role="tab" aria-selected="false" data-tab="d25">Чт 25</button>
+          <button class="tab is-active" role="tab" aria-selected="true" data-tab="d26">Пт 26</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="d27">Сб 27</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="d28">Вс 28</button>
+        </div>
+
+        <div class="day-panels reveal">
+          <!-- Чт 25 -->
+          <div class="day-panel" data-panel="d25" role="tabpanel" hidden>
+            <ul class="event-list">
+              <li class="event-item">
+                <span class="ev-time">12:00</span>
+                <div class="ev-info">
+                  <span class="event-type t-show">Сеанс</span>
+                  <strong>«Рождение звёзд» — сеанс в куполе 360°</strong>
+                  <em>25 мин · Большой купол · 6+</em>
+                </div>
+                <a href="tickets.html" class="btn btn-ghost btn-sm">Билет</a>
+              </li>
+              <li class="event-item">
+                <span class="ev-time">16:00</span>
+                <div class="ev-info">
+                  <span class="event-type t-tour">Экскурсия</span>
+                  <strong>Жизнь на орбите — экскурсия по станции «Мир-2»</strong>
+                  <em>45 мин · Зал 4 · 4+</em>
+                </div>
+                <a href="tickets.html" class="btn btn-ghost btn-sm">Билет</a>
+              </li>
+              <li class="event-item">
+                <span class="ev-time">19:30</span>
+                <div class="ev-info">
+                  <span class="event-type t-lecture">Лекция</span>
+                  <strong>«Титан: море из метана» — зачем туда летит «Дракон»</strong>
+                  <em>60 мин · Лекторий · 12+</em>
+                </div>
+                <a href="tickets.html" class="btn btn-ghost btn-sm">Билет</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Пт 26 -->
+          <div class="day-panel" data-panel="d26" role="tabpanel">
+            <ul class="event-list">
+              <li class="event-item">
+                <span class="ev-time">14:00</span>
+                <div class="ev-info">
+                  <span class="event-type t-work">Мастер-класс</span>
+                  <strong>«Собери марсоход» — конструктор для всей семьи</strong>
+                  <em>90 мин · Зал 2 · 6+ · по записи</em>
+                </div>
+                <a href="tickets.html" class="btn btn-ghost btn-sm">Билет</a>
+              </li>
+              <li class="event-item event-hot">
+                <span class="ev-time">19:00</span>
+                <div class="ev-info">
+                  <span class="event-type t-lecture">Лекция</span>
+                  <strong>«Почему мы ещё не колонизировали Луну»</strong>
+                  <em>Лектор — инженер Роскосмоса · 75 мин · Лекторий · 12+</em>
+                </div>
+                <a href="tickets.html" class="btn btn-primary btn-sm">Билет</a>
+              </li>
+              <li class="event-item">
+                <span class="ev-time">21:00</span>
+                <div class="ev-info">
+                  <span class="event-type t-obs">Наблюдение</span>
+                  <strong>Вечер открытого телескопа: Луна крупным планом</strong>
+                  <em>90 мин · Обсерватория · 4+</em>
+                </div>
+                <a href="tickets.html" class="btn btn-ghost btn-sm">Билет</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Сб 27 -->
+          <div class="day-panel" data-panel="d27" role="tabpanel" hidden>
+            <ul class="event-list">
+              <li class="event-item">
+                <span class="ev-time">12:00</span>
+                <div class="ev-info">
+                  <span class="event-type t-show">Сеанс</span>
+                  <strong>«Чёрные дыры: за горизонтом»</strong>
+                  <em>40 мин · Большой купол · 12+</em>
+                </div>
+                <a href="tickets.html" class="btn btn-ghost btn-sm">Билет</a>
+              </li>
+              <li class="event-item">
+                <span class="ev-time">18:00</span>
+                <div class="ev-info">
+                  <span class="event-type t-show">Сеанс</span>
+                  <strong>«Живые луны» — семейный показ с тактильными макетами</strong>
+                  <em>30 мин · Зал 1 · 4+</em>
+                </div>
+                <a href="tickets.html" class="btn btn-ghost btn-sm">Билет</a>
+              </li>
+              <li class="event-item event-hot">
+                <span class="ev-time">21:00</span>
+                <div class="ev-info">
+                  <span class="event-type t-show">Шоу</span>
+                  <strong>«Сатурн в зените» — ночной кинопоказ в полном куполе</strong>
+                  <em>50 мин · Большой купол · 6+</em>
+                </div>
+                <a href="tickets.html" class="btn btn-primary btn-sm">Билет</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Вс 28 -->
+          <div class="day-panel" data-panel="d28" role="tabpanel" hidden>
+            <ul class="event-list">
+              <li class="event-item">
+                <span class="ev-time">13:00</span>
+                <div class="ev-info">
+                  <span class="event-type t-work">Мастер-класс</span>
+                  <strong>«Роботы-астронавты» — программируем своего помощника</strong>
+                  <em>60 мин · Зал 3 · 6+ · по записи</em>
+                </div>
+                <a href="tickets.html" class="btn btn-ghost btn-sm">Билет</a>
+              </li>
+              <li class="event-item">
+                <span class="ev-time">18:30</span>
+                <div class="ev-info">
+                  <span class="event-type t-tour">Экскурсия</span>
+                  <strong>«Марс: хроники красной планеты» с VR-посадкой</strong>
+                  <em>50 мин · Зал 2 · 6+</em>
+                </div>
+                <a href="tickets.html" class="btn btn-ghost btn-sm">Билет</a>
+              </li>
+              <li class="event-item event-hot">
+                <span class="ev-time">22:30</span>
+                <div class="ev-info">
+                  <span class="event-type t-obs">Наблюдение</span>
+                  <strong>Ночь открытого телескопа: Юпитер и кольца Сатурна</strong>
+                  <em>До утра · Обсерватория · 4+</em>
+                </div>
+                <a href="tickets.html" class="btn btn-primary btn-sm">Билет</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="notice reveal">
+          <strong>Важно:</strong> купольные сеансы начинаются точно по расписанию — вход в купол закрывается с первым кадром. Опоздавшим вежливо, но твёрдо предложат следующий сеанс.
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-panel reveal">
+          <h2>Не выбрали время?</h2>
+          <p>Единый билет действует весь день на все залы — купольные сеансы можно дополнить на месте.</p>
+          <a href="tickets.html" class="btn btn-primary btn-lg">Взять единый билет</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="logo" href="index.html">ОРБИТА</a>
+        <p>Музей космоса будущего.<br>Москва, Космическая наб., 9 · ежедневно 10:00—22:00</p>
+      </div>
+      <nav class="footer-nav" aria-label="Разделы сайта">
+        <a href="index.html">Главная</a>
+        <a href="expositions.html">Экспозиции</a>
+        <a href="affiche.html">Афиша</a>
+        <a href="tickets.html">Билеты</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <p class="footer-copy">© 2026 ОРБИТА. Концепт-демо — кейс для UI/UX-портфолио.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

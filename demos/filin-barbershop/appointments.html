@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мои записи — барбершоп «ФИЛИН»</title>
+  <meta name="description" content="Ваши записи в барбершоп «Филин»: предстоящие визиты, детали и отмена в один клик.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="ФИЛИН — на главную">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+          <rect x="2" y="2" width="22" height="22" rx="4" stroke="#c9a26b" stroke-width="2"/>
+          <circle cx="9.5" cy="11" r="1.7" fill="#c9a26b"/>
+          <circle cx="16.5" cy="11" r="1.7" fill="#c9a26b"/>
+          <path d="M9 16.5c1.3 1.2 2.6 1.8 4 1.8s2.7-.6 4-1.8" stroke="#c9a26b" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M13 2v4M6.5 3.5 8 6.5M19.5 3.5 18 6.5" stroke="#c9a26b" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+        ФИЛИН
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+        <a href="index.html">Главная</a>
+        <a href="services.html">Услуги</a>
+        <a href="masters.html">Мастера</a>
+        <a href="appointments.html" class="is-active" aria-current="page">Мои записи</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <a href="booking.html" class="btn btn-brass btn-sm header-cta">Записаться</a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="kicker">Личный кабинет — почти</p>
+        <h1>Мои <span class="accent">записи</span></h1>
+        <p class="page-lead">Записи хранятся в этом браузере — на демо это вместо аккаунта. Отмена в один клик, без объяснений.</p>
+      </div>
+    </section>
+
+    <section class="section flush-top">
+      <div class="container">
+        <div id="appointments-list" class="appointments-list"></div>
+
+        <div class="appointments-empty card-flat" id="appointments-empty" hidden>
+          <p class="ae-ico" aria-hidden="true">🪒</p>
+          <h2>Записей пока нет</h2>
+          <p>Самое время это исправить: кресло свободнее, чем кажется.</p>
+          <a href="booking.html" class="btn btn-brass">Записаться</a>
+        </div>
+
+        <p class="appointments-note reveal">Демо-режим: записи живут в localStorage вашего браузера. В продакшене здесь был бы вход по номеру телефона и коду из SMS.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="index.html">ФИЛИН</a>
+        <p>Барбершоп на Дегтярном, 3.<br>Стрижки, бороды, виски и разговоры.</p>
+      </div>
+      <nav class="footer-col" aria-label="Разделы сайта">
+        <h3>Разделы</h3>
+        <a href="index.html">Главная</a>
+        <a href="services.html">Услуги</a>
+        <a href="masters.html">Мастера</a>
+        <a href="booking.html">Запись онлайн</a>
+        <a href="appointments.html">Мои записи</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <div class="footer-col">
+        <h3>Режим работы</h3>
+        <p>Пн — Вс, 10:00 — 21:00<br>Без выходных</p>
+        <p>Касса до 20:30</p>
+      </div>
+      <div class="footer-col">
+        <h3>Связь</h3>
+        <p><a href="tel:+74950000000">+7 (495) 000-00-00</a></p>
+        <p><a href="mailto:hi@filin.shop">hi@filin.shop</a></p>
+        <p class="footer-socials"><a href="index.html">VK</a> · <a href="index.html">Telegram</a> · <a href="index.html">WhatsApp</a></p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 Барбершоп «Филин». Концепт-демо — кейс для UI/UX-портфолио.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты — барбершоп «ФИЛИН»</title>
+  <meta name="description" content="Адрес, часы работы и телефон барбершопа «Филин». Как добраться и как написать нам.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="ФИЛИН — на главную">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+          <rect x="2" y="2" width="22" height="22" rx="4" stroke="#c9a26b" stroke-width="2"/>
+          <circle cx="9.5" cy="11" r="1.7" fill="#c9a26b"/>
+          <circle cx="16.5" cy="11" r="1.7" fill="#c9a26b"/>
+          <path d="M9 16.5c1.3 1.2 2.6 1.8 4 1.8s2.7-.6 4-1.8" stroke="#c9a26b" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M13 2v4M6.5 3.5 8 6.5M19.5 3.5 18 6.5" stroke="#c9a26b" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+        ФИЛИН
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+        <a href="index.html">Главная</a>
+        <a href="services.html">Услуги</a>
+        <a href="masters.html">Мастера</a>
+        <a href="appointments.html">Мои записи</a>
+        <a href="contacts.html" class="is-active" aria-current="page">Контакты</a>
+      </nav>
+      <a href="booking.html" class="btn btn-brass btn-sm header-cta">Записаться</a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="kicker">Контакты</p>
+        <h1>Как нас <span class="accent">найти</span></h1>
+        <p class="page-lead">Дегтярный переулок, 3 — синяя дверь с совой. Звонить не обязательно, но можно.</p>
+      </div>
+    </section>
+
+    <section class="section flush-top">
+      <div class="container contacts-layout">
+        <div class="contact-col">
+          <div class="card-flat info-block reveal">
+            <ul class="info-list">
+              <li>
+                <span class="info-ico" aria-hidden="true">📍</span>
+                <span><strong>Адрес</strong><br>Москва, Дегтярный пер., 3 — 6 минут от метро</span>
+              </li>
+              <li>
+                <span class="info-ico" aria-hidden="true">🕘</span>
+                <span><strong>Часы работы</strong><br>Ежедневно 10:00—21:00, касса до 20:30</span>
+              </li>
+              <li>
+                <span class="info-ico" aria-hidden="true">📞</span>
+                <span><strong>Телефон</strong><br><a href="tel:+74950000000">+7 (495) 000-00-00</a></span>
+              </li>
+              <li>
+                <span class="info-ico" aria-hidden="true">✉️</span>
+                <span><strong>Почта</strong><br><a href="mailto:hi@filin.shop">hi@filin.shop</a></span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card-flat map-block reveal" data-delay="1" role="img" aria-label="Схема проезда: барбершоп в Дегтярном переулке, 3">
+            <span class="map-grid" aria-hidden="true"></span>
+            <span class="map-street" aria-hidden="true"></span>
+            <span class="map-street map-street-2" aria-hidden="true"></span>
+            <span class="map-pin" aria-hidden="true"><i></i></span>
+            <span class="map-label" aria-hidden="true">м. Достоевская</span>
+            <span class="map-label map-label-2" aria-hidden="true">ФИЛИН · Дегтярный, 3</span>
+          </div>
+
+          <div class="routes reveal" data-delay="2">
+            <div class="route-item">
+              <strong>Ⓜ️ Метро</strong>
+              <span>«Достоевская» — выход 2, потом 6 минут пешком вдоль сквера.</span>
+            </div>
+            <div class="route-item">
+              <strong>🚗 Машина</strong>
+              <span>Парковка во дворе, 6 мест для гостей — имя администратору.</span>
+            </div>
+            <div class="route-item">
+              <strong>🛴 Самокат</strong>
+              <span>Парковка самокатов прямо у двери. Мы не в сериале, но подмигиваем стилю.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-flat form-block reveal" data-delay="1">
+          <h2>Написать нам</h2>
+          <form id="contact-form" novalidate>
+            <label class="field">
+              <span class="field-label">Имя *</span>
+              <input type="text" id="cf-name" name="name" placeholder="Ваше имя" required>
+            </label>
+            <label class="field">
+              <span class="field-label">Телефон или почта *</span>
+              <input type="text" id="cf-contact" name="contact" placeholder="Куда ответить" required>
+            </label>
+            <label class="field">
+              <span class="field-label">Сообщение</span>
+              <textarea id="cf-message" name="message" rows="4" placeholder="Здравствуйте! Хотел бы…"></textarea>
+            </label>
+            <button type="submit" class="btn btn-brass btn-block">Отправить</button>
+            <p class="form-note">Отвечаем в рабочее время, обычно в течение часа.</p>
+          </form>
+          <div class="form-success" id="contact-success" hidden>
+            <p class="ws-ico" aria-hidden="true">🦉</p>
+            <h3>Сообщение доставлено</h3>
+            <p>Филин уже летит с ответом. Обычно отвечаем в течение часа с 10:00 до 21:00.</p>
+            <button type="button" class="btn btn-line" id="contact-again">Написать ещё</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="index.html">ФИЛИН</a>
+        <p>Барбершоп на Дегтярном, 3.<br>Стрижки, бороды, виски и разговоры.</p>
+      </div>
+      <nav class="footer-col" aria-label="Разделы сайта">
+        <h3>Разделы</h3>
+        <a href="index.html">Главная</a>
+        <a href="services.html">Услуги</a>
+        <a href="masters.html">Мастера</a>
+        <a href="booking.html">Запись онлайн</a>
+        <a href="appointments.html">Мои записи</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <div class="footer-col">
+        <h3>Режим работы</h3>
+        <p>Пн — Вс, 10:00 — 21:00<br>Без выходных</p>
+        <p>Касса до 20:30</p>
+      </div>
+      <div class="footer-col">
+        <h3>Связь</h3>
+        <p><a href="tel:+74950000000">+7 (495) 000-00-00</a></p>
+        <p><a href="mailto:hi@filin.shop">hi@filin.shop</a></p>
+        <p class="footer-socials"><a href="index.html">VK</a> · <a href="index.html">Telegram</a> · <a href="index.html">WhatsApp</a></p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 Барбершоп «Филин». Концепт-демо — кейс для UI/UX-портфолио.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

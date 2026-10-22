@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>УТРО — студия йоги на Пятницкой</title>
+  <meta name="description" content="Бутиновая студия йоги: виньяса, инь, ресторатив и пранаяма. Маленькие группы, тёплый свет, первый класс бесплатно.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#top">утро</a>
+      <nav class="site-nav" id="site-nav" aria-label="Разделы">
+        <a href="#practices">Практики</a>
+        <a href="#teachers">Преподаватели</a>
+        <a href="#schedule">Расписание</a>
+        <a href="#first">Первый класс</a>
+      </nav>
+      <button class="sound-toggle mono" id="sound-toggle" type="button" aria-pressed="false" title="Тихий колокольчик при первом скролле">звук выкл</button>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ============ HERO: дыхание ============ -->
+    <section class="hero">
+      <div class="sunbeams" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="kicker reveal">студия йоги · Пятницкая, 8 · с 2019</p>
+          <h1 class="reveal" data-delay="1">утро</h1>
+          <p class="lead reveal" data-delay="2">Йога для тех, кто устал спешить. Маленькие группы до восьми человек, тёплый свет из больших окон и никаких «похудей к лету».</p>
+          <div class="hero-actions reveal" data-delay="3">
+            <a href="#first" class="btn btn-terra">Первый класс — бесплатно</a>
+            <a href="#schedule" class="btn btn-quiet">Расписание</a>
+          </div>
+        </div>
+        <figure class="hero-visual reveal" data-delay="2">
+          <div class="breath">
+            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=75&w=900&fm=jpg" alt="Утренняя практика у большого окна" class="kb">
+          </div>
+          <p class="breath-caption mono">фигура дышит циклом 4 секунды — как мы на занятиях</p>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ ПРАКТИКИ ============ -->
+    <section class="practice" id="practices">
+      <div class="sunbeams beams-left" aria-hidden="true"></div>
+      <div class="container">
+        <p class="idea-kicker reveal">практики</p>
+        <h2 class="idea-title reveal" data-delay="1">Четыре способа провести час с собой</h2>
+        <div class="pr-grid">
+          <article class="pr-card reveal">
+            <img src="https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?q=70&w=700&fm=jpg" alt="Виньяса: поток движения" class="kb">
+            <h3>Виньяса</h3>
+            <p>Дыхание, вплетённое в движение. Практика разогревает и собирает ум.</p>
+            <p class="pr-meta">60 мин · интенсивность ●●○</p>
+          </article>
+          <article class="pr-card reveal" data-delay="1">
+            <img src="https://images.unsplash.com/photo-1602192509154-0b900ee1f851?q=70&w=700&fm=jpg" alt="Инь: долгая поза" class="kb">
+            <h3>Инь</h3>
+            <p>Три-пять минут в позе. Тянем не мышцы, а время.</p>
+            <p class="pr-meta">75 мин · интенсивность ●○○</p>
+          </article>
+          <article class="pr-card reveal" data-delay="2">
+            <img src="https://images.unsplash.com/photo-1588286840104-8957b019727f?q=70&w=700&fm=jpg" alt="Ресторатив: поддержка болстерами" class="kb">
+            <h3>Ресторатив</h3>
+            <p>Полная поддержка болстерами и одеялом. Делаешь почти ничего — и именно этого не хватает.</p>
+            <p class="pr-meta">60 мин · интенсивность ●○○</p>
+          </article>
+          <article class="pr-card reveal" data-delay="3">
+            <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=70&w=700&fm=jpg" alt="Пранаяма: дыхательная практика" class="kb">
+            <h3>Пранаяма</h3>
+            <p>Сорок пять минут только дыхания. Звучит просто. Работает глубже всех.</p>
+            <p class="pr-meta">45 мин · интенсивность ●○○</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ПРЕПОДАВАТЕЛИ ============ -->
+    <section class="teacher" id="teachers">
+      <div class="sunbeams beams-right" aria-hidden="true"></div>
+      <div class="container">
+        <p class="idea-kicker reveal">преподаватели</p>
+        <h2 class="idea-title reveal" data-delay="1">Наведите курсор — и услышите, почему они преподают</h2>
+
+        <div class="teach-row reveal">
+          <img class="kb" src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?q=70&w=700&fm=jpg" alt="Мара Вострикова на практике">
+          <div class="teach-body">
+            <h3>Мара Вострикова</h3>
+            <p class="teach-role">виньяса · 12 лет практики</p>
+            <p class="teach-quote mono" data-quote="Я преподаю не позы, а паузы между ними.">· наведите курсор ·</p>
+          </div>
+        </div>
+        <div class="teach-row flip reveal">
+          <img class="kb" src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=70&w=700&fm=jpg" alt="Лиза Грант в медитации">
+          <div class="teach-body">
+            <h3>Лиза Грант</h3>
+            <p class="teach-role">инь · ресторатив · 7 лет практики</p>
+            <p class="teach-quote mono" data-quote="Тишина — тоже практика. Моя любимая.">· наведите курсор ·</p>
+          </div>
+        </div>
+        <div class="teach-row reveal">
+          <img class="kb" src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=70&w=700&fm=jpg" alt="Аня Ким дышит перед практикой">
+          <div class="teach-body">
+            <h3>Аня Ким</h3>
+            <p class="teach-role">пранаяма · 5 лет практики</p>
+            <p class="teach-quote mono" data-quote="Дыхание — единственный инструмент, который всегда с тобой.">· наведите курсор ·</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ РАСПИСАНИЕ ============ -->
+    <section class="schedule" id="schedule">
+      <div class="container container-sched">
+        <p class="idea-kicker reveal">расписание</p>
+        <h2 class="idea-title reveal" data-delay="1">Неделя в УТРЕ</h2>
+        <p class="idea-sub reveal" data-delay="2">Нажмите на занятие — раскроется зал и что нужно знать перед первым разом.</p>
+
+        <div class="sched reveal" id="sched">
+          <div class="sched-row">
+            <button class="sched-head" type="button" aria-expanded="false">
+              <span class="s-day mono">пн</span><span class="s-time mono">19:00</span>
+              <span class="s-name">Виньяса</span>
+              <span class="s-avail ok">4 места</span>
+            </button>
+            <div class="sched-more"><p>Зал «Свет» · Мара Вострикова. Подходит с любого уровня — усложнения показываем отдельно. Приходите за 15 минут, коврики есть.</p></div>
+          </div>
+          <div class="sched-row">
+            <button class="sched-head" type="button" aria-expanded="false">
+              <span class="s-day mono">ср</span><span class="s-time mono">10:00</span>
+              <span class="s-name">Инь</span>
+              <span class="s-avail low">2 места</span>
+            </button>
+            <div class="sched-more"><p>Зал «Тишина» · Лиза Грант. Самая тихая практика недели. Не ешьте за час до — позы делаются на мягкий желудок.</p></div>
+          </div>
+          <div class="sched-row">
+            <button class="sched-head" type="button" aria-expanded="false">
+              <span class="s-day mono">ср</span><span class="s-time mono">19:30</span>
+              <span class="s-name">Ресторатив</span>
+              <span class="s-avail ok">6 мест</span>
+            </button>
+            <div class="sched-more"><p>Зал «Тишина» · Лиза Грант. Возьмите тёплые носки — вы почти не двигаетесь. Идеально после тяжёлой недели.</p></div>
+          </div>
+          <div class="sched-row">
+            <button class="sched-head" type="button" aria-expanded="false">
+              <span class="s-day mono">чт</span><span class="s-time mono">08:00</span>
+              <span class="s-name">Пранаяма</span>
+              <span class="s-avail ok">5 мест</span>
+            </button>
+            <div class="sched-more"><p>Зал «Свет» · Аня Ким. Практикуются сидя. Новичкам можно с первого раза — дыхание у вас уже есть.</p></div>
+          </div>
+          <div class="sched-row is-full">
+            <button class="sched-head" type="button" aria-expanded="false" disabled>
+              <span class="s-day mono">пт</span><span class="s-time mono">19:00</span>
+              <span class="s-name">Виньяса</span>
+              <span class="s-avail none">мест нет</span>
+            </button>
+            <div class="sched-more"><p>Запись закрыта. Загляните в понедельник — или напишите нам, иногда места освобождаются.</p></div>
+          </div>
+          <div class="sched-row">
+            <button class="sched-head" type="button" aria-expanded="false">
+              <span class="s-day mono">сб</span><span class="s-time mono">11:00</span>
+              <span class="s-name">Инь</span>
+              <span class="s-avail ok">3 места</span>
+            </button>
+            <div class="sched-more"><p>Зал «Тишина» · Лиза Грант. После занятия завариваем чай — оставайтесь, если никуда не спешите.</p></div>
+          </div>
+          <div class="sched-row">
+            <button class="sched-head" type="button" aria-expanded="false">
+              <span class="s-day mono">вс</span><span class="s-time mono">18:00</span>
+              <span class="s-name">Ресторатив</span>
+              <span class="s-avail low">1 место</span>
+            </button>
+            <div class="sched-more"><p>Зал «Свет» · Мара Вострикова. Последнее занятие недели — закрываем воскресенье мягко.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ПЕРВЫЙ КЛАСС ============ -->
+    <section class="first" id="first">
+      <div class="sunbeams beams-left" aria-hidden="true"></div>
+      <div class="container first-grid">
+        <div class="first-copy">
+          <p class="idea-kicker reveal">первый класс</p>
+          <h2 class="idea-title reveal" data-delay="1">Первый раз — наш подарок</h2>
+          <p class="idea-sub reveal" data-delay="2">Одно занятие бесплатно, без абонемента и обязательств. Приходите, полежите, подышите — решите сами.</p>
+        </div>
+        <form class="first-form reveal" id="first-form" data-delay="2" novalidate>
+          <label class="ff"><span>имя</span><input type="text" id="ff-name" placeholder="как к вам обращаться" required></label>
+          <label class="ff"><span>телефон</span><input type="tel" id="ff-phone" placeholder="+7 ___ ___-__-__" required></label>
+          <label class="ff"><span>какая практика откликается</span>
+            <select id="ff-practice">
+              <option>Виньяса</option>
+              <option>Инь</option>
+              <option>Ресторатив</option>
+              <option>Пранаяма</option>
+              <option>Ещё не знаю</option>
+            </select>
+          </label>
+          <button type="submit" class="btn btn-terra">Записаться на первый класс</button>
+          <p class="ff-note mono">ответим в течение дня · без напоминаний и рассылок</p>
+        </form>
+        <div class="ff-done reveal" id="ff-done" hidden>
+          <p class="ff-icon">☼</p>
+          <h3>Вы записаны</h3>
+          <p id="ff-summary">—</p>
+          <p class="ff-note mono">до встречи в УТРЕ</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><span class="logo-mini">утро</span> · студия йоги · Пятницкая, 8</p>
+      <p>© 2026 · концепт-демо — кейс для UI/UX-портфолио · фото Unsplash</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

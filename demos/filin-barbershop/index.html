@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ФИЛИН — барбершоп в центре города</title>
+  <meta name="description" content="Барбершоп «Филин»: мужские стрижки, бороды, опасная бритва. Онлайн-запись без звонков, ежедневно 10:00—21:00.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="ФИЛИН — на главную">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+          <rect x="2" y="2" width="22" height="22" rx="4" stroke="#c9a26b" stroke-width="2"/>
+          <circle cx="9.5" cy="11" r="1.7" fill="#c9a26b"/>
+          <circle cx="16.5" cy="11" r="1.7" fill="#c9a26b"/>
+          <path d="M9 16.5c1.3 1.2 2.6 1.8 4 1.8s2.7-.6 4-1.8" stroke="#c9a26b" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M13 2v4M6.5 3.5 8 6.5M19.5 3.5 18 6.5" stroke="#c9a26b" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+        ФИЛИН
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+        <a href="index.html" class="is-active" aria-current="page">Главная</a>
+        <a href="services.html">Услуги</a>
+        <a href="masters.html">Мастера</a>
+        <a href="appointments.html">Мои записи</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <a href="booking.html" class="btn btn-brass btn-sm header-cta">Записаться</a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container">
+        <p class="kicker reveal">Барбершоп «Филин» · с 2019 года · Дегтярный пер., 3</p>
+        <h1 class="reveal" data-delay="1">Стрижка<br>как <span class="accent">ритуал</span></h1>
+        <p class="lead reveal" data-delay="2">Три мастера, опасная бритва и виски, который мы варим не мы, но наливаем. Онлайн-запись за минуту — без звонков и «а есть ли окно».</p>
+        <div class="hero-actions reveal" data-delay="3">
+          <a href="booking.html" class="btn btn-brass">Записаться онлайн</a>
+          <a href="services.html" class="btn btn-line">Смотреть услуги</a>
+        </div>
+        <ul class="hero-notes reveal" data-delay="3">
+          <li>Ежедневно 10:00—21:00</li>
+          <li>Кофе, виски и настолки — бесплатно</li>
+          <li>Оплата картой и наличными</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ ЦИФРЫ ============ -->
+    <section class="stats">
+      <div class="container stats-grid">
+        <div class="stat reveal"><span class="stat-value" data-count="7">0</span><span class="stat-label">лет одно кресло держит форму</span></div>
+        <div class="stat reveal" data-delay="1"><span class="stat-value" data-count="40000" data-suffix="+">0</span><span class="stat-label">стрижек с момента открытия</span></div>
+        <div class="stat reveal" data-delay="2"><span class="stat-value" data-count="4">0</span><span class="stat-label">мастера, ни одного случайного</span></div>
+        <div class="stat reveal" data-delay="3"><span class="stat-value" data-count="4.8" data-decimals="1">0</span><span class="stat-label">средняя оценка на картах</span></div>
+      </div>
+    </section>
+
+    <!-- ============ УСЛУГИ-ПРЕВЬЮ ============ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Услуги</span>
+          <h2>Что здесь делают</h2>
+        </div>
+        <div class="price-preview">
+          <a href="booking.html" class="price-row reveal" data-service="s1">
+            <span class="pr-name">Мужская стрижка<em>ножницы, машинка и разговор по делу</em></span>
+            <span class="pr-meta">60 мин</span>
+            <span class="pr-price">2 000 ₽</span>
+          </a>
+          <a href="booking.html" class="price-row reveal" data-delay="1" data-service="b1">
+            <span class="pr-name">Оформление бороды<em>форма, окантовка, горячее полотенце</em></span>
+            <span class="pr-meta">45 мин</span>
+            <span class="pr-price">1 500 ₽</span>
+          </a>
+          <a href="booking.html" class="price-row price-row-hot reveal" data-delay="2" data-service="c1">
+            <span class="pr-tag">хит</span>
+            <span class="pr-name">«Филин»: стрижка + борода<em>полный ритуал, как у постоянных</em></span>
+            <span class="pr-meta">90 мин</span>
+            <span class="pr-price">3 200 ₽</span>
+          </a>
+          <a href="booking.html" class="price-row reveal" data-delay="3" data-service="u1">
+            <span class="pr-name">Камуфляж седины<em>аккуратно, без «окрашенного» эффекта</em></span>
+            <span class="pr-meta">45 мин</span>
+            <span class="pr-price">1 600 ₽</span>
+          </a>
+        </div>
+        <div class="center reveal"><a href="services.html" class="btn btn-line">Весь прайс — 14 услуг</a></div>
+      </div>
+    </section>
+
+    <!-- ============ МАСТЕРА ============ -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Команда</span>
+          <h2>Кто держит ножницы</h2>
+        </div>
+        <div class="cards-grid four">
+          <a href="masters.html" class="master-mini reveal">
+            <span class="avatar">ГК</span>
+            <strong>Гриша «Топор»</strong>
+            <em>топ-барбер · 11 лет</em>
+          </a>
+          <a href="masters.html" class="master-mini reveal" data-delay="1">
+            <span class="avatar">ТС</span>
+            <strong>Тимур Салихов</strong>
+            <em>барбер · 7 лет</em>
+          </a>
+          <a href="masters.html" class="master-mini reveal" data-delay="2">
+            <span class="avatar">ДО</span>
+            <strong>Данила Орлов</strong>
+            <em>барбер-стилист · 5 лет</em>
+          </a>
+          <a href="masters.html" class="master-mini reveal" data-delay="3">
+            <span class="avatar">МГ</span>
+            <strong>Марк Гельман</strong>
+            <em>мастер бороды · 8 лет</em>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ОТЗЫВЫ ============ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Отзывы</span>
+          <h2>Что говорят в кресле</h2>
+        </div>
+        <div class="cards-grid three">
+          <figure class="card quote-card reveal">
+            <div class="stars" aria-label="5 из 5">★★★★★</div>
+            <blockquote>«Хожу к Грише четвёртый год. Ни разу не вышел „не так“. Один раз уснул в кресле — досыпали, отдельное спасибо».</blockquote>
+            <figcaption>Сергей, 37 лет</figcaption>
+          </figure>
+          <figure class="card quote-card reveal" data-delay="1">
+            <div class="stars" aria-label="5 из 5">★★★★★</div>
+            <blockquote>«Привёл сына на первую в его жизни стрижку. Вышел с наклейкой и твёрдым „приду ещё“. Волшебники».</blockquote>
+            <figcaption>Антон, 34 года</figcaption>
+          </figure>
+          <figure class="card quote-card reveal" data-delay="2">
+            <div class="stars" aria-label="5 из 5">★★★★★</div>
+            <blockquote>«Борода после Марка лежит три дня без единого волоска не туда. Это, я вам скажу, инженерия».</blockquote>
+            <figcaption>Дмитрий, 29 лет</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-panel reveal">
+          <h2>Кресло свободно сегодня вечером</h2>
+          <p>Выберите услугу, мастера и время — подтвердим сразу, без звонка.</p>
+          <a href="booking.html" class="btn btn-brass btn-lg">Записаться за минуту</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="index.html">ФИЛИН</a>
+        <p>Барбершоп на Дегтярном, 3.<br>Стрижки, бороды, виски и разговоры.</p>
+      </div>
+      <nav class="footer-col" aria-label="Разделы сайта">
+        <h3>Разделы</h3>
+        <a href="index.html">Главная</a>
+        <a href="services.html">Услуги</a>
+        <a href="masters.html">Мастера</a>
+        <a href="booking.html">Запись онлайн</a>
+        <a href="appointments.html">Мои записи</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <div class="footer-col">
+        <h3>Режим работы</h3>
+        <p>Пн — Вс, 10:00 — 21:00<br>Без выходных</p>
+        <p>Касса до 20:30</p>
+      </div>
+      <div class="footer-col">
+        <h3>Связь</h3>
+        <p><a href="tel:+74950000000">+7 (495) 000-00-00</a></p>
+        <p><a href="mailto:hi@filin.shop">hi@filin.shop</a></p>
+        <p class="footer-socials"><a href="#top">VK</a> · <a href="#top">Telegram</a> · <a href="#top">WhatsApp</a></p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 Барбершоп «Филин». Концепт-демо — кейс для UI/UX-портфолио.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

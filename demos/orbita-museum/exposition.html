@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Чёрные дыры: за горизонтом — экспозиция музея «ОРБИТА»</title>
+  <meta name="description" content="Кинопутешествие к горизонту событий в куполе 360°. Расписание сеансов, что вы увидите и как подготовиться.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="ОРБИТА — на главную">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+          <circle cx="13" cy="13" r="5" fill="url(#or)"/>
+          <ellipse cx="13" cy="13" rx="11.5" ry="5.5" stroke="url(#or)" stroke-width="1.8" transform="rotate(-18 13 13)"/>
+          <circle cx="22.5" cy="8.5" r="1.8" fill="#fbbf24"/>
+          <defs><linearGradient id="or" x1="0" y1="0" x2="26" y2="26"><stop stop-color="#fbbf24"/><stop offset="1" stop-color="#fb723c"/></linearGradient></defs>
+        </svg>
+        ОРБИТА
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+        <a href="index.html">Главная</a>
+        <a href="expositions.html" class="is-active" aria-current="page">Экспозиции</a>
+        <a href="affiche.html">Афиша</a>
+        <a href="tickets.html">Билеты</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <a href="tickets.html" class="btn btn-primary btn-sm header-cta">Купить билет</a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ ШАПКА ЭКСПОЗИЦИИ ============ -->
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumbs reveal" aria-label="Хлебные крошки">
+          <a href="index.html">Главная</a><span aria-hidden="true">/</span><a href="expositions.html">Экспозиции</a><span aria-hidden="true">/</span><em>Чёрные дыры</em>
+        </nav>
+        <div class="detail-grid">
+          <div class="detail-copy">
+            <span class="expo-tag reveal">Купол 360° · 40 минут · 12+</span>
+            <h1 class="reveal" data-delay="1">Чёрные дыры: <span class="grad-text">за горизонтом</span></h1>
+            <p class="page-lead reveal" data-delay="2">Самый популярный сеанс музея. Полтора миллиарда километров никуда — путешествие к границе, из которой ещё не возвращался никто. Сеанс идёт под куполом 360° со звуком 32 канала.</p>
+            <div class="hero-actions reveal" data-delay="3">
+              <a href="tickets.html" class="btn btn-primary">Купить билет — 650 ₽</a>
+              <a href="#schedule" class="btn btn-ghost">Расписание сеансов</a>
+            </div>
+          </div>
+          <div class="detail-art reveal" data-delay="2" role="img" aria-label="Чёрная дыра с кольцом аккреции">
+            <span class="hole-scene" aria-hidden="true">
+              <span class="hole-accretion"></span>
+              <span class="hole-core"></span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ЧТО ВЫ УВИДИТЕ ============ -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Программа</span>
+          <h2>Что вы увидите</h2>
+        </div>
+        <div class="cards-grid four">
+          <article class="card step-card reveal">
+            <span class="step-num">01</span>
+            <h3>Падение к горизонту</h3>
+            <p>Купол медленно тянет к точке невозврата — вестибулярный аппарат в полном недоумении.</p>
+          </article>
+          <article class="card step-card reveal" data-delay="1">
+            <span class="step-num">02</span>
+            <h3>Мир искажается</h3>
+            <p>Гравитационное линзирование в реальном времени: за дырой видно то, что должно быть позади вас.</p>
+          </article>
+          <article class="card step-card reveal" data-delay="2">
+            <span class="step-num">03</span>
+            <h3>Машина времени</h3>
+            <p>Прыжок к сверхмассивной Sagittarius A* — той самой, в центре нашей Галактики.</p>
+          </article>
+          <article class="card step-card reveal" data-delay="3">
+            <span class="step-num">04</span>
+            <h3>Обратный путь</h3>
+            <p>Финал с твистом, который гости просят не спойлерить. Мы не будем.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ФАКТЫ + РАСПИСАНИЕ ============ -->
+    <section class="section">
+      <div class="container detail-columns">
+        <div class="facts reveal">
+          <h2 class="h-left">Три факта перед сеансом</h2>
+          <ul class="facts-list">
+            <li><strong>Sagittarius A*</strong> — в 4 миллионах раз тяжелее Солнца и всего в 26 000 световых лет от вас.</li>
+            <li><strong>Горизонт событий</strong> — не стена, а граница. Пересечь её можно; обратить вспять — нельзя.</li>
+            <li><strong>Время</strong> возле дыры течёт медленнее: 40 минут сеанса — это «мгновение» для космонавта у горизонта.</li>
+          </ul>
+          <div class="facts-price">
+            <div class="price-line"><span>Взрослый</span><strong>650 ₽</strong></div>
+            <div class="price-line"><span>Детский (4—14 лет)</span><strong>400 ₽</strong></div>
+            <div class="price-line"><span>Семейный (2+2)</span><strong>1 500 ₽</strong></div>
+            <a href="tickets.html" class="btn btn-primary btn-block">Выбрать сеанс и билет</a>
+          </div>
+        </div>
+        <div class="detail-schedule reveal" data-delay="1" id="schedule">
+          <h2 class="h-left">Расписание сеансов</h2>
+          <p class="schedule-note">Билеты — на конкретный сеанс. Приходите за 10 минут: вход закрывается с началом.</p>
+          <ul class="timeline-list">
+            <li><span class="t-time">11:00</span><span class="t-free">свободно</span></li>
+            <li><span class="t-time">12:20</span><span class="t-free">свободно</span></li>
+            <li><span class="t-time">13:40</span><span class="t-low">осталось мало</span></li>
+            <li><span class="t-time">15:00</span><span class="t-free">свободно</span></li>
+            <li><span class="t-time">17:40</span><span class="t-sold">распродано</span></li>
+            <li><span class="t-time">19:00</span><span class="t-low">осталось мало</span></li>
+          </ul>
+          <p class="schedule-note">Ежедневно, кроме понедельника — в понедельник купол обслуживается.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ДРУГИЕ ЭКСПОЗИЦИИ ============ -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Ещё в музее</span>
+          <h2>Другие экспозиции</h2>
+        </div>
+        <div class="cards-grid three">
+          <a href="expositions.html" class="card expo-card reveal">
+            <div class="expo-art art-mars"><span class="mars-disc" aria-hidden="true"></span></div>
+            <div class="expo-body">
+              <span class="expo-tag">Зал 2 · 6+</span>
+              <h3>Марс: хроники красной планеты</h3>
+              <span class="expo-link">Подробнее →</span>
+            </div>
+          </a>
+          <a href="expositions.html" class="card expo-card reveal" data-delay="1">
+            <div class="expo-art art-stars"><span class="stars-disc" aria-hidden="true"></span></div>
+            <div class="expo-body">
+              <span class="expo-tag">Купол 360° · 6+</span>
+              <h3>Рождение звёзд</h3>
+              <span class="expo-link">Подробнее →</span>
+            </div>
+          </a>
+          <a href="expositions.html" class="card expo-card reveal" data-delay="2">
+            <div class="expo-art art-station"><span class="station-disc" aria-hidden="true"></span></div>
+            <div class="expo-body">
+              <span class="expo-tag">Зал 4 · 4+</span>
+              <h3>Станция «Мир-2»</h3>
+              <span class="expo-link">Подробнее →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="logo" href="index.html">ОРБИТА</a>
+        <p>Музей космоса будущего.<br>Москва, Космическая наб., 9 · ежедневно 10:00—22:00</p>
+      </div>
+      <nav class="footer-nav" aria-label="Разделы сайта">
+        <a href="index.html">Главная</a>
+        <a href="expositions.html">Экспозиции</a>
+        <a href="affiche.html">Афиша</a>
+        <a href="tickets.html">Билеты</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <p class="footer-copy">© 2026 ОРБИТА. Концепт-демо — кейс для UI/UX-портфолио.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
