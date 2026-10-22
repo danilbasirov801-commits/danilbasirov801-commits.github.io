@@ -577,7 +577,7 @@
   display: flex;
   flex-direction: column;
   background: var(--surface);
-  border: 1px solid var(--line);
+  border: 1px solid color-mix(in srgb, var(--accent) 55%, var(--line));
   border-radius: var(--radius);
   padding: 26px 24px;
   transition: transform .2s, box-shadow .2s, border-color .2s;
@@ -587,7 +587,7 @@
   box-shadow: var(--shadow-md);
   border-color: color-mix(in srgb, var(--accent) 40%, var(--line));
 }
-.price-card--hit { border-color: color-mix(in srgb, var(--accent) 55%, var(--line)); }
+.price-card--hit { border-width: 1.5px; }
 
 .price-name { font-weight: 700; font-size: 16px; letter-spacing: -0.01em; }
 
