@@ -34,5 +34,13 @@
     });
   });
 
+  /* Синхронизация между открытыми вкладками: сменили язык в одной —
+     все остальные страницы переключаются сразу, без перезагрузки */
+  window.addEventListener("storage", function (e) {
+    if (e.key === "lang" && (e.newValue === "ru" || e.newValue === "en")) {
+      setLang(e.newValue);
+    }
+  });
+
   updateButtons();
 })();
