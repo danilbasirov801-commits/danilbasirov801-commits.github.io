@@ -112,7 +112,10 @@ body {
   transition: background .25s ease, color .25s ease;
 }
 
-img { display: block; max-width: 100%; }
+/* height: auto сбивает HTML-атрибут height (иначе на телефоне
+   картинки с width/height-атрибутами рендерятся в натуральную высоту,
+   игнорируя aspect-ratio из правил ниже) */
+img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; }
 button { font: inherit; }
 

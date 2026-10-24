@@ -521,6 +521,15 @@
 
 /* --- Навыки и таймлайн (страница «Обо мне») ---------------------------------------------------------------- */
 
+/* Флекс-контейнер: пилюли навыков — блочные элементы с переносом.
+   Без этого они остаются строчными, и вертикальные отступы не
+   раздвигают строки — на телефоне ряды налезают друг на друга */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 .skill {
   background: var(--surface);
   border: 1px solid var(--line);
@@ -715,3 +724,92 @@
 .to-top.visible { opacity: 1; transform: none; pointer-events: auto; }
 .to-top:hover { background: var(--accent-strong); }
 .to-top svg { width: 20px; height: 20px; }
+
+/* --- Попап предпросмотра кейса ------------------------------------------------
+   Карточка проекта открывает кейс во всплывающем окне вместо перехода
+   на отдельную страницу. Отдельные страницы остаются — они нужны для
+   ссылок, закладок и поисковиков (кнопка «Открыть как страницу» внутри). */
+
+.case-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 150;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(10, 9, 14, .62);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease;
+}
+.case-popup.open { opacity: 1; pointer-events: auto; }
+
+.case-popup-box {
+  position: relative;
+  width: min(940px, 100%);
+  max-height: 92vh;
+  overflow: auto;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 30px 30px 24px;
+  box-shadow: var(--shadow-md);
+  transform: translateY(16px) scale(.985);
+  transition: transform .22s ease;
+}
+.case-popup.open .case-popup-box { transform: none; }
+
+.case-popup-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 5;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color .15s, color .15s;
+}
+.case-popup-close:hover { border-color: var(--accent); color: var(--accent); }
+
+.case-popup-loading {
+  padding: 60px 0;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* Внутри попапа отдельные элементы кейса не нужны или ведут себя иначе */
+.case-popup .info-card { position: static; }
+.case-popup .back-link,
+.case-popup .next-case { display: none; }
+
+.case-popup-links {
+  margin-top: 26px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: center;
+}
+.case-popup-links .btn { font-size: 15px; padding: 12px 22px; }
+
+body.popup-open { overflow: hidden; }
+
+@media (max-width: 760px) {
+  /* На телефоне попап — во весь экран */
+  .case-popup { padding: 0; }
+  .case-popup-box {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    border: 0;
+    border-radius: 0;
+    padding: 22px 20px 20px;
+  }
+}
